@@ -1,5 +1,5 @@
 <template>
-  <header-default />
+  <header-hero />
   <main>
     <slot />
   </main>

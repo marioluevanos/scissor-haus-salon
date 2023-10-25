@@ -1,5 +1,5 @@
 {
-  "name": "nuxt-app",
+  "name": "scissor-haus-salon-client",
   "private": true,
   "scripts": {
     "build": "nuxt build",

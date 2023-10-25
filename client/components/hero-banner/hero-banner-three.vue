@@ -29,16 +29,16 @@
           <div class="row align-items-center">
             <div class="col-xl-6 col-lg-6 col-md-8">
               <div class="tp-slider-content-3">
-                <span class="pb-15">Grand Opening</span>
+                <span class="pb-20">Grand Opening</span>
                 <h3 class="tp-slider-title-3">Unlock Your Hair's Potential</h3>
-                <div class="tp-slider-btn-3">
+                <!-- <div class="tp-slider-btn-3">
                   <nuxt-link
                     href="/about"
                     class="tp-btn tp-btn-border tp-btn-border-white"
                   >
                     Discover Now
                   </nuxt-link>
-                </div>
+                </div> -->
               </div>
             </div>
           </div>

@@ -34,7 +34,9 @@
           <div class="tp-slider-play">
             <button
               type="button"
-              :class="`tp-slider-play-btn tp-slider-video-move-btn tp-video-toggle-btn ${play ? 'hide' : ''}`"
+              :class="`tp-slider-play-btn tp-slider-video-move-btn tp-video-toggle-btn ${
+                play ? 'hide' : ''
+              }`"
               @click="handleVideoPlay"
             >
               <img
@@ -59,14 +61,14 @@
                 <span>{{ item.subtitle }}</span>
                 <h3 class="tp-slider-title-4">{{ item.title }}</h3>
 
-                <div class="tp-slider-btn-4">
+                <!-- <div class="tp-slider-btn-4">
                   <nuxt-link
                     href="/shop"
                     class="tp-btn tp-btn-border tp-btn-border-white"
                   >
                     Discover Now
                   </nuxt-link>
-                </div>
+                </div> -->
               </div>
             </div>
           </div>

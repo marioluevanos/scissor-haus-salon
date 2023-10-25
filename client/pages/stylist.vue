@@ -1,9 +1,5 @@
 <template>
-  <div>
-    <!-- profile area start -->
-    <profile-area />
-    <!-- profile area end -->
-  </div>
+  <profile-area />
 </template>
 
 <script setup lang="ts">

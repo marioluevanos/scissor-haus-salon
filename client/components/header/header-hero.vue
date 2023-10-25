@@ -78,7 +78,7 @@ const utilityStore = useUtilityStore();
       </nav>
       <nuxt-link href="/" class="logo">
         <img class="logo-light" src="/img/logo/logo-white.svg" alt="logo" />
-        <img class="logo-dark" src="/img/logo/logo.svg" alt="logo" />
+        <img class="logo-dark" src="/img/logo/logo-black.svg" alt="logo" />
       </nuxt-link>
       <button
         @click="utilityStore.handleOpenMobileMenu()"
@@ -89,15 +89,7 @@ const utilityStore = useUtilityStore();
       </button>
     </div>
   </header>
-  <!-- search bar start -->
   <header-component-search3 />
-  <!-- search bar end -->
-
-  <!-- cart offcanvas start -->
   <offcanvas-cart-sidebar />
-  <!-- cart offcanvas end -->
-
-  <!-- cart offcanvas start -->
   <offcanvas-mobile-sidebar product-type="beauty" />
-  <!-- cart offcanvas end -->
 </template>

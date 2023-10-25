@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "dev": "cd client && npm run dev",
-    "build": "cd client && npm run build"
+    "build": ".tools/generate.sh",
+    "deploy": "firebase deploy && npm run cleanpublic",
+    "cleanpublic": "rm -r -f public/*"
   },
   "keywords": [],
   "author": "",

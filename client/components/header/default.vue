@@ -78,7 +78,7 @@ const utilityStore = useUtilityStore();
         <!-- menus end -->
       </nav>
       <nuxt-link href="/" class="logo">
-        <img src="/img/logo/logo.svg" alt="logo" />
+        <img src="/img/logo/logo-black.svg" alt="logo" />
       </nuxt-link>
       <button
         @click="utilityStore.handleOpenMobileMenu()"

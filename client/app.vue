@@ -19,6 +19,5 @@ watch(
 <template>
   <NuxtLayout>
     <NuxtPage />
-    <modal-product />
   </NuxtLayout>
 </template>
