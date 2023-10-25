@@ -25,11 +25,6 @@
             </div>
           </div>
         </div>
-        <div class="col-md-6">
-          <div class="profile__main-logout text-sm-end">
-            <nuxt-link href="/login" class="tp-logout-btn">Logout</nuxt-link>
-          </div>
-        </div>
       </div>
     </div>
     <div class="profile__main-info">
