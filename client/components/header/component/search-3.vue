@@ -1,7 +1,5 @@
 <template>
-  <section
-    :class="`tp-search-area tp-search-style-brown ${utilityStore.openSearchBar ? 'opened' : ''}`"
-  >
+  <section :class="`tp-search-area tp-search-style-brown`">
     <div class="container">
       <div class="row">
         <div class="col-xl-12">
@@ -36,27 +34,20 @@
       </div>
     </div>
   </section>
-
-  <div
-    @click="utilityStore.handleOpenSearchBar()"
-    :class="`body-overlay ${utilityStore.openSearchBar ? 'opened' : ''}`"
-  ></div>
 </template>
 
 <script setup lang="ts">
-import { useUtilityStore } from "@/pinia/useUtilityStore";
 const router = useRouter();
 let searchText = ref<string>("");
 let productType = ref<string>("");
-const utilityStore = useUtilityStore();
+
 const categories: string[] = ["electronics", "fashion", "beauty", "jewelry"];
 
 // handleSubmit
 const handleSubmit = () => {
   if (!searchText.value && !productType.value) {
-    return
-  }
-  else if (searchText.value && productType.value) {
+    return;
+  } else if (searchText.value && productType.value) {
     router.push(
       `/search?searchText=${searchText.value}&productType=${productType.value}`
     );

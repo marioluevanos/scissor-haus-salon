@@ -11,16 +11,16 @@ export const menuLinks: IMenuItem[] = [
     link: "/about",
     title: "About Us",
   },
-  {
-    id: 3,
-    link: "/stylist",
-    title: "Stylists",
-  },
-  {
-    id: 3,
-    link: "/contact",
-    title: "Contact",
-  },
+  // {
+  //   id: 3,
+  //   link: "/stylist",
+  //   title: "Stylists",
+  // },
+  // {
+  //   id: 3,
+  //   link: "/contact",
+  //   title: "Contact",
+  // },
 ];
 
 // mobile menu data

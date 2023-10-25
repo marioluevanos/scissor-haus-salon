@@ -1,20 +1,13 @@
 <template>
-  <nuxt-layout>
-    <hero-banner-three />
-    <categories-beauty />
-    <!-- <feature-three /> -->
-    <!-- <product-beauty-area /> -->
-    <!-- <collection-beauty /> -->
-    <!-- <product-beauty-best-collection /> -->
-    <!-- <product-beauty-special-items /> -->
-    <testimonial-beauty />
-    <feature-two />
-    <instagram-area-3 />
-  </nuxt-layout>
+  <hero-default />
+  <!-- <categories-beauty />
+  <feature-three />
+  <testimonial-beauty /> -->
+  <instagram-area-4 />
 </template>
 
 <script setup lang="ts">
 definePageMeta({
-  layout: "hero",
+  layout: "hero-layout",
 });
 </script>
