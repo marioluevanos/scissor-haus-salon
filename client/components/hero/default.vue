@@ -1,3 +1,37 @@
+<script setup lang="ts">
+import { Swiper, SwiperSlide } from "swiper/vue";
+import { Navigation, Pagination, EffectFade } from "swiper/modules";
+
+// slider data type
+type ISlider = {
+  id: number;
+  bg: string;
+  subtitle: string;
+  title: string;
+};
+// slider data
+const slider_data: ISlider[] = [
+  {
+    id: 1,
+    bg: "/img/slider/slider-1.jpg",
+    subtitle: "Grand Opening",
+    title: "Unlock Your Hair's Potential",
+  },
+  {
+    id: 2,
+    bg: "/img/slider/slider-2.jpg",
+    subtitle: "Top Brand Collection",
+    title: "Use the best for you.",
+  },
+  {
+    id: 3,
+    bg: "/img/slider/slider-3.jpg",
+    subtitle: "Awesome Beauty Products",
+    title: "Don't Worry for Skincare",
+  },
+];
+</script>
+
 <template>
   <section class="tp-slider-area p-relative z-index-1">
     <Swiper
@@ -31,14 +65,14 @@
               <div class="tp-slider-content-3">
                 <span class="pb-20">Grand Opening</span>
                 <h3 class="tp-slider-title-3">Unlock Your Hair's Potential</h3>
-                <!-- <div class="tp-slider-btn-3">
+                <div class="tp-slider-btn-3">
                   <nuxt-link
                     href="/about"
                     class="tp-btn tp-btn-border tp-btn-border-white"
                   >
                     Discover Now
                   </nuxt-link>
-                </div> -->
+                </div>
               </div>
             </div>
           </div>
@@ -58,37 +92,3 @@
     </Swiper>
   </section>
 </template>
-
-<script setup lang="ts">
-import { Swiper, SwiperSlide } from "swiper/vue";
-import { Navigation, Pagination, EffectFade } from "swiper/modules";
-
-// slider data type
-type ISlider = {
-  id: number;
-  bg: string;
-  subtitle: string;
-  title: string;
-};
-// slider data
-const slider_data: ISlider[] = [
-  {
-    id: 1,
-    bg: "/img/slider/3/slider-1.jpg",
-    subtitle: "Grand Opening",
-    title: "Unlock Your Hair's Potential",
-  },
-  {
-    id: 2,
-    bg: "/img/slider/3/slider-2.jpg",
-    subtitle: "Top Brand Collection",
-    title: "Use the best for you.",
-  },
-  {
-    id: 3,
-    bg: "/img/slider/3/slider-3.jpg",
-    subtitle: "Awesome Beauty Products",
-    title: "Don't Worry for Skincare",
-  },
-];
-</script>

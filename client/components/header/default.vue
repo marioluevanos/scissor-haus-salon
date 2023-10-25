@@ -1,8 +1,5 @@
 <script setup lang="ts">
-import { useUtilityStore } from "@/pinia/useUtilityStore";
-
 const { isSticky } = useSticky();
-const utilityStore = useUtilityStore();
 </script>
 
 <style scoped lang="scss">
@@ -80,24 +77,9 @@ const utilityStore = useUtilityStore();
       <nuxt-link href="/" class="logo">
         <img src="/img/logo/logo-black.svg" alt="logo" />
       </nuxt-link>
-      <button
-        @click="utilityStore.handleOpenMobileMenu()"
-        type="button"
-        class="menu"
-      >
-        <svg-menu-icon />
-      </button>
     </div>
   </header>
   <!-- search bar start -->
   <header-component-search3 />
   <!-- search bar end -->
-
-  <!-- cart offcanvas start -->
-  <offcanvas-cart-sidebar />
-  <!-- cart offcanvas end -->
-
-  <!-- cart offcanvas start -->
-  <offcanvas-mobile-sidebar product-type="beauty" />
-  <!-- cart offcanvas end -->
 </template>

@@ -1,10 +1,9 @@
 <template>
-  <hero-banner-three />
-  <feature-two />
+  <hero-default />
   <!-- <categories-beauty />
   <feature-three />
-  <testimonial-beauty />
-  <instagram-area-3 /> -->
+  <testimonial-beauty /> -->
+  <instagram-area-4 />
 </template>
 
 <script setup lang="ts">

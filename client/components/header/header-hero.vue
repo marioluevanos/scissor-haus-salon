@@ -1,8 +1,5 @@
 <script setup lang="ts">
-import { useUtilityStore } from "@/pinia/useUtilityStore";
-
 const { isSticky } = useSticky();
-const utilityStore = useUtilityStore();
 </script>
 
 <style scoped lang="scss">
@@ -17,7 +14,7 @@ const utilityStore = useUtilityStore();
 .container {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-start;
   position: relative;
   height: inherit;
 }
@@ -38,8 +35,6 @@ const utilityStore = useUtilityStore();
 
 .nav {
   display: none;
-  position: absolute;
-  right: 1rem;
   @media (min-width: 768px) {
     display: flex;
   }
@@ -72,24 +67,13 @@ const utilityStore = useUtilityStore();
   >
     <div class="container">
       <nav class="nav">
-        <!-- menus start -->
         <header-component-menus />
-        <!-- menus end -->
       </nav>
       <nuxt-link href="/" class="logo">
         <img class="logo-light" src="/img/logo/logo-white.svg" alt="logo" />
         <img class="logo-dark" src="/img/logo/logo-black.svg" alt="logo" />
       </nuxt-link>
-      <button
-        @click="utilityStore.handleOpenMobileMenu()"
-        type="button"
-        class="menu"
-      >
-        <svg-menu-icon />
-      </button>
     </div>
   </header>
   <header-component-search3 />
-  <offcanvas-cart-sidebar />
-  <offcanvas-mobile-sidebar product-type="beauty" />
 </template>
