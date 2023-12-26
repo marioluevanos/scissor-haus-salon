@@ -3,7 +3,7 @@
   <!-- <categories-beauty />
   <feature-three />
   <testimonial-beauty /> -->
-  <instagram-area-4 />
+  <instagram-default />
 </template>
 
 <script setup lang="ts">

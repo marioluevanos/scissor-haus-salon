@@ -164,3 +164,75 @@
   display: -webkit-flex;
   display: flex;
 }
+
+/**
+ * Breakpoints
+ */
+
+$media-1: 375px;
+$media-2: 540px;
+$media-3: 768px;
+$media-4: 1024px;
+$media-5: 1280px;
+$media-6: 1440px;
+$media-7: 1920px;
+
+@mixin media($size) {
+  @if $size==1-up {
+    @media (min-width: $media-1) {
+      @content;
+    }
+  } @else if $size==2-up {
+    @media (min-width: $media-2) {
+      @content;
+    }
+  } @else if $size==3-up {
+    @media (min-width: $media-3) {
+      @content;
+    }
+  } @else if $size==4-up {
+    @media (min-width: $media-4) {
+      @content;
+    }
+  } @else if $size==5-up {
+    @media (min-width: $media-5) {
+      @content;
+    }
+  } @else if $size==6-up {
+    @media (min-width: $media-6) {
+      @content;
+    }
+  } @else if $size==7-up {
+    @media (min-width: $media-7) {
+      @content;
+    }
+  } @else if $size==1-down {
+    @media (max-width: #{$media-1 - 1px}) {
+      @content;
+    }
+  } @else if $size==2-down {
+    @media (max-width: #{$media-2 - 1px}) {
+      @content;
+    }
+  } @else if $size==3-down {
+    @media (max-width: #{$media-3 - 1px}) {
+      @content;
+    }
+  } @else if $size==4-down {
+    @media (max-width: #{$media-4 - 1px}) {
+      @content;
+    }
+  } @else if $size==5-down {
+    @media (max-width: #{$media-5 - 1px}) {
+      @content;
+    }
+  } @else if $size==6-down {
+    @media (max-width: #{$media-6 - 1px}) {
+      @content;
+    }
+  } @else if $size==7-down {
+    @media (max-width: #{$media-7 - 1px}) {
+      @content;
+    }
+  }
+}
