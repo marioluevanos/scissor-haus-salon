@@ -88,10 +88,12 @@ const instagram_data: IInstagram[] = [
   display: grid;
   grid-template-columns: 1fr 1fr;
 
-  @include media(2-up) {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  @include media(1-up) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @include media(3-up) {
+    grid-template-columns: repeat(6, 1fr);
   }
 }
 

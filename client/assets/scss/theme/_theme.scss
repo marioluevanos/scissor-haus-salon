@@ -139,7 +139,6 @@
 ---------------------------------*/
 body {
   font-family: var(--tp-ff-body);
-  font-size: 14px;
   font-weight: normal;
   color: var(--tp-text-body);
   line-height: 26px;
@@ -165,6 +164,7 @@ h6 {
 
 h1 {
   font-size: 40px;
+  font-weight: 400;
 }
 
 h2 {
@@ -173,17 +173,17 @@ h2 {
 
 h3 {
   font-size: 28px;
-  font-weight: 600;
+  font-weight: 400;
 }
 
 h4 {
   font-size: 24px;
-  font-weight: 600;
+  font-weight: 400;
 }
 
 h5 {
   font-size: 20px;
-  font-weight: 600;
+  font-weight: 400;
 }
 
 h6 {
@@ -197,7 +197,6 @@ ul {
 
 p {
   font-family: var(--tp-ff-p);
-  font-size: 14px;
   font-weight: 400;
   color: var(--tp-text-body);
   margin-bottom: 15px;

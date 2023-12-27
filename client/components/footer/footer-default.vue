@@ -26,18 +26,32 @@ const social_data: {
       <div class="footer-contact">
         <h4 class="title">Follow Us</h4>
         <div class="social-icons">
-          <nuxt-link href="/" class="social-icon">
-            <img src="/img/logo/favicon.png" alt="logo" />
-          </nuxt-link>
           <a
             v-for="item in social_data"
             :key="item.id"
             :href="item.link"
             class="social-icon"
+            target="_blank"
+            rel="noopener"
           >
             <i :class="item.icon"></i>
           </a>
         </div>
+      </div>
+
+      <div class="footer-contact">
+        <h4 class="title">Find Us</h4>
+        <p class="footer-contact-item">
+          <SvgLocation class="icon location" />
+          <a
+            href="https://www.google.com/maps/place/Scissor+Haus+Salon/@34.1446806,-118.1529652,15z/data=!4m2!3m1!1s0x0:0x22f439cae3df5286?sa=X&ved=2ahUKEwjjqZSu0oOCAxUtJEQIHdw3CtcQ_BJ6BAhMEAA&ved=2ahUKEwjjqZSu0oOCAxUtJEQIHdw3CtcQ_BJ6BAhTEAg"
+            target="_blank"
+            rel="noopener"
+          >
+            117 W Green St. <br />
+            Pasadena, CA 91105
+          </a>
+        </p>
       </div>
 
       <div class="footer-contact">
@@ -51,20 +65,6 @@ const social_data: {
           <a href="mailto:ruthie@scissorhaussalon.com"
             >ruthie@scissorhaussalon.com</a
           >
-        </p>
-      </div>
-
-      <div class="footer-contact">
-        <h4 class="title">Find Us</h4>
-        <p class="footer-contact-item">
-          <SvgLocation class="icon location" />
-          <a
-            href="https://www.google.com/maps/place/Scissor+Haus+Salon/@34.1446806,-118.1529652,15z/data=!4m2!3m1!1s0x0:0x22f439cae3df5286?sa=X&ved=2ahUKEwjjqZSu0oOCAxUtJEQIHdw3CtcQ_BJ6BAhMEAA&ved=2ahUKEwjjqZSu0oOCAxUtJEQIHdw3CtcQ_BJ6BAhTEAg"
-            target="_blank"
-          >
-            117 W Green St. <br />
-            Pasadena, CA 91105
-          </a>
         </p>
       </div>
     </div>
@@ -84,6 +84,8 @@ const social_data: {
 .root {
   position: relative;
   margin: auto;
+  border-top: 1px solid var(--tp-grey-2);
+  padding-top: 3rem;
 }
 
 .social-icons {
@@ -143,17 +145,17 @@ const social_data: {
 }
 
 .footer-middle {
-  max-width: 1280px;
+  max-width: 768px;
   margin: 0 auto 3rem;
   padding: 0 1rem;
   display: flex;
   grid-gap: 2rem;
   flex-direction: column;
 
-  @include media(2-up) {
+  @include media(3-up) {
     flex-direction: row;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
   }
 }
 

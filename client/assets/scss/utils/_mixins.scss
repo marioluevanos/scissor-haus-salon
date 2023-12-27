@@ -236,3 +236,8 @@ $media-7: 1920px;
     }
   }
 }
+
+@mixin font-smoothing() {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}

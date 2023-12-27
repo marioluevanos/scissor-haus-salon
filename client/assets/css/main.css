@@ -506,7 +506,7 @@ li,
   @font family declaration
   */
   --tp-ff-body: "Jost", sans-serif;
-  --tp-ff-heading: "Jost", sans-serif;
+  --tp-ff-heading: "Roboto", "Jost", sans-serif;
   --tp-ff-p: "Jost", sans-serif;
   --tp-ff-jost: "Jost", sans-serif;
   --tp-ff-fontawesome: "Font Awesome 6 Pro";
@@ -7391,12 +7391,12 @@ a.ui-button:active {
   .tp-header-action-btn:hover {
   color: var(--tp-theme-brown);
 }
-.tp-header-sticky.header-sticky.has-dark-logo .logo .logo-light {
+/* .tp-header-sticky.header-sticky.has-dark-logo .logo .logo-light {
   display: none;
 }
 .tp-header-sticky.header-sticky.has-dark-logo .logo .logo-dark {
   display: block;
-}
+} */
 .tp-header-style-transparent-white .tp-header-action-badge {
   background-color: var(--tp-common-white);
   color: var(--tp-common-black);

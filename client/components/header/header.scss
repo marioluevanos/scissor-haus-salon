@@ -1,0 +1,108 @@
+@import "../../assets/scss/utils/_mixins.scss";
+@import "../../assets/scss/utils/_variables.scss";
+
+.root {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 90px;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 1000;
+  color: black;
+  border-bottom: 1px solid var(--tp-grey-2);
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: white;
+    z-index: 0;
+    box-shadow: 0 4px 8px rgba(black, 0);
+    transition: transform 0.6s $ease-in-expo, box-shadow 0.6s $ease-in-expo;
+    transform: translate3d(0, -100%, 0);
+  }
+
+  .has-hero & {
+    @include media(3-up) {
+      color: white;
+      border-bottom: 1px solid rgba(white, 0.16);
+    }
+  }
+
+  &.header-sticky {
+    border-bottom-color: transparent;
+    color: black;
+    &::before {
+      box-shadow: 0 4px 8px rgba(black, 0.16);
+      transform: translate3d(0, 0, 0);
+      transition: transform 0.6s $ease-out-expo, box-shadow 0.6s $ease-out-expo;
+    }
+  }
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  position: relative;
+  height: inherit;
+  z-index: 1;
+  max-width: 768px;
+
+  > * {
+    transition: color 0.6s $ease-out-expo 0s;
+  }
+}
+
+.header-sticky .container > * {
+  transition: color 0.6s $ease-out-expo 0s;
+}
+
+.logo {
+  display: block;
+  margin: auto;
+  max-width: 12rem;
+  position: absolute;
+  left: 0;
+  right: 0;
+
+  svg {
+    width: 100%;
+    height: 100%;
+    display: block;
+    fill: currentColor;
+  }
+}
+
+.nav {
+  display: flex;
+  color: currentColor;
+  grid-gap: 1rem;
+  list-style: none;
+  display: none;
+
+  @include media(3-up) {
+    display: flex;
+  }
+
+  a {
+    color: currentColor;
+  }
+
+  a.router-link-exact-active {
+    border-bottom: 1px solid currentColor;
+  }
+}
+
+.menu {
+  position: absolute;
+  left: 1rem;
+  z-index: 1;
+  color: currentColor;
+  @include media(3-up) {
+    display: flex;
+  }
+}

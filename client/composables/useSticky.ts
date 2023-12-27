@@ -3,7 +3,7 @@ import { ref, onMounted } from "vue";
 export function useSticky() {
   let isSticky = ref<boolean>(false);
   const handleSticky = () => {
-    if (window.scrollY > 80) {
+    if (window.scrollY > 90) {
       isSticky.value = true;
     } else {
       isSticky.value = false;

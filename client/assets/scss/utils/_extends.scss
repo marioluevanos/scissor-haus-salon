@@ -5,31 +5,31 @@
 }
 
 %tp-transition {
-  @include tp-transition();
+  // @include tp-transition();
 }
 
 %tp-transition-common {
-  @include tp-transition();
+  // @include tp-transition();
 }
 
 %tp-transition-color {
-  @include tp-transition(color);
+  // @include tp-transition(color);
 }
 
 %tp-transition-transform {
-  @include tp-transition(transform);
+  // @include tp-transition(transform);
 }
 
 %tp-transition-border-color {
-  @include tp-transition(border-color);
+  // @include tp-transition(border-color);
 }
 
 %tp-transition-bg-color {
-  @include tp-transition(backgroud-color);
+  // @include tp-transition(backgroud-color);
 }
 
 %tp-transition-fz {
-  @include tp-transition(font-size);
+  // @include tp-transition(font-size);
 }
 
 // svg

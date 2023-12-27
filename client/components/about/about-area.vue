@@ -1,50 +1,64 @@
+<script setup lang="ts"></script>
+
 <template>
-  <section class="tp-about-area pb-80 pt-120">
-    <div class="container">
-      <div class="row">
-        <div class="col-xl-8 col-lg-10">
-          <div class="tp-about-banner-wrapper">
-            <span class="tp-about-banner-subtitle mb-15">About Us</span>
-            <h3 class="tp-about-banner-title">
-              Meet Our Extraordinary Team of Stylists Redefining Color and
-              Trends
-            </h3>
-          </div>
-        </div>
+  <section class="root">
+    <header class="header">
+      <h1 class="title">Our Mission</h1>
+      <h2 class="subtitle">
+        To provide happiness, confidence, and empowerment. We are focused on
+        providing the best professional quality services to our individual
+        clients.
+      </h2>
+    </header>
+    <figure class="banner">
+      <img src="/img/about/about-big-1.jpg" alt="about-img" />
+    </figure>
+    <section class="content">
+      <p>
+        Scissor Haus Salon is a women-owned salon based in the heart of
+        Pasadena, CA. Owner, Ruthie Luevanos has a following of 15 years plus
+        clientele because of consistency, passion and love of the beauty
+        industry. Cultivated through years of training to create the effortless
+        looks everyone deserves. Precision cutting, effortless styling,
+        maximizing style and grow out. Trained with Vidal Sassoon Academy in
+        hair cutting and color. Bumble and Bumble in New York City style and
+        cut. Tony and Guy hair cutting and style are amongst some of the
+        training she has received and continues to receive.
+      </p>
+    </section>
+    <section class="testimonials">
+      <!-- <h2 class="title">Testimonial</h2> -->
+      <blockquote class="testimonial">
+        <p>Ruthie makes happy hair</p>
+        <cite>Carrie, Pasadena, CA</cite>
+      </blockquote>
+    </section>
+
+    <section class="content team">
+      <div class="text">
+        <h2 class="title">Team</h2>
+        <p>
+          Our creative, talented stylists have the knowledge and experience to
+          develop personalized looks for any mood, attitude, or lifestyle.
+        </p>
+        <img src="/img/about/about-group.jpg" alt="About" class="team-image" />
+        <p>
+          Together, we can re-energize both the way you look and the way you
+          feel about yourself.
+        </p>
+        <p>
+          Our team is united by a passion for their craft. We help to enrich our
+          clients’ lives by bringing out each person’s natural beauty from
+          within.
+        </p>
       </div>
-      <div class="row">
-        <div class="col-xl-12">
-          <div class="tp-about-banner-thumb w-img">
-            <img src="/img/about/about-big-1.jpg" alt="about-img" />
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-xl-12">
-          <div class="tp-about-banner-content">
-            <p>
-              We are thrilled to offer you a wide range of products that you
-              won't find anywhere else. Whether you're shopping for clothing,
-              accessories, gadgets, or home decor, we have something for
-              everyone.
-            </p>
-            <p>
-              Our commitment to quality is reflected in every product we offer.
-              We work with top suppliers and manufacturers to ensure that every
-              item we sell meets our high standards for durability, performance,
-              and style. And with a user-friendly interface and intuitive
-              navigation, shopping on our site is a breeze. We understand that
-              security is a top concern for online shoppers, which is why we
-              employ the latest encryption technologies and follow industry best
-              practices to keep your personal information safe. And with fast,
-              reliable shipping options, you can enjoy your purchases in no
-              time.
-            </p>
-          </div>
-        </div>
-      </div>
+    </section>
+    <div class="cta">
+      <nuxt-link href="/services" class="button">See Our Services</nuxt-link>
     </div>
   </section>
 </template>
 
-<script setup lang="ts"></script>
+<style lang="scss" scoped>
+@import "./about-area.scss";
+</style>
