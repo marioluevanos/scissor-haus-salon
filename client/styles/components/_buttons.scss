@@ -1,0 +1,33 @@
+@use "../utils" as *;
+
+.button {
+  display: inline-block;
+  padding: 0.5rem 2rem;
+  font-family: var(--tp-ff-body);
+  border: 1px solid currentColor;
+  color: black;
+  background: transparent;
+  border-radius: 4px;
+  transition: color 0.15s $ease-out-sine, background 0.15s $ease-out-sine;
+
+  @media (hover: hover) {
+    &:hover {
+      background: black;
+      color: white;
+    }
+  }
+
+  &.hero {
+    border: 1px solid var(--tp-theme-brown);
+    background: var(--tp-theme-brown);
+
+    [data-hero]:has(&) {
+      color: white;
+    }
+
+    @include media(3-up) {
+      border-color: currentColor;
+      background-color: transparent;
+    }
+  }
+}

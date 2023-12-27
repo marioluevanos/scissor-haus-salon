@@ -6,14 +6,14 @@ const { isSticky } = useSticky();
 <template>
   <header id="header-sticky" :class="`root ${isSticky ? 'header-sticky' : ''}`">
     <div class="container">
+      <nuxt-link href="/" class="logo">
+        <header-logo />
+      </nuxt-link>
       <nav class="nav">
         <nuxt-link v-for="(item, i) in menuLinks" :key="i" :href="item.link">{{
           item.title
         }}</nuxt-link>
       </nav>
-      <nuxt-link href="/" class="logo">
-        <header-component-logo />
-      </nuxt-link>
     </div>
   </header>
 </template>

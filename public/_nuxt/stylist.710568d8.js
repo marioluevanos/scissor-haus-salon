@@ -1,0 +1,1 @@
+import{d as o,u as t,r as a,o as s,g as r}from"./entry.3c27a836.js";const l=o({__name:"stylist",setup(n){return t({title:"Stylist Page"}),(p,_)=>{const e=a("profile-area");return s(),r(e)}}});export{l as default};

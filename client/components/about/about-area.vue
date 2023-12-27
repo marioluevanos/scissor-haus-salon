@@ -11,7 +11,7 @@
       </h2>
     </header>
     <figure class="banner">
-      <img src="/img/about/about-big-1.jpg" alt="about-img" />
+      <img src="/about/about-big-1.jpg" alt="about-img" />
     </figure>
     <section class="content">
       <p>
@@ -41,7 +41,7 @@
           Our creative, talented stylists have the knowledge and experience to
           develop personalized looks for any mood, attitude, or lifestyle.
         </p>
-        <img src="/img/about/about-group.jpg" alt="About" class="team-image" />
+        <img src="/about/about-group.jpg" alt="About" class="team-image" />
         <p>
           Together, we can re-energize both the way you look and the way you
           feel about yourself.

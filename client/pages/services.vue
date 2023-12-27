@@ -47,7 +47,7 @@ const services = [
 </template>
 
 <style lang="scss" scoped>
-@use "../assets/scss/utils/_mixins.scss" as *;
+@use "../styles/utils/_mixins.scss" as *;
 
 .title {
   color: var(--tp-theme-brown);

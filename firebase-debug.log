@@ -1,0 +1,25 @@
+[debug] [2023-12-27T21:25:05.377Z] ----------------------------------------------------------------------
+[debug] [2023-12-27T21:25:05.378Z] Command:       /Users/marioluevanos/.nvm/versions/node/v16.16.0/bin/node /Users/marioluevanos/.nvm/versions/node/v16.16.0/bin/firebase deploy
+[debug] [2023-12-27T21:25:05.378Z] CLI Version:   11.16.0
+[debug] [2023-12-27T21:25:05.378Z] Platform:      darwin
+[debug] [2023-12-27T21:25:05.378Z] Node Version:  v16.16.0
+[debug] [2023-12-27T21:25:05.379Z] Time:          Wed Dec 27 2023 13:25:05 GMT-0800 (Pacific Standard Time)
+[debug] [2023-12-27T21:25:05.380Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-12-27T21:25:05.381Z] >>> [apiv2][query] GET https://firebase-public.firebaseio.com/cli.json [none]
+[debug] [2023-12-27T21:25:05.416Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-12-27T21:25:05.416Z] > authorizing via signed-in user (marioluevanos@gmail.com)
+[debug] [2023-12-27T21:25:05.416Z] [iam] checking project scissor-haus-salon for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2023-12-27T21:25:05.416Z] > refreshing access token with scopes: []
+[debug] [2023-12-27T21:25:05.417Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2023-12-27T21:25:05.417Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2023-12-27T21:25:05.587Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2023-12-27T21:25:05.587Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2023-12-27T21:25:05.606Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/scissor-haus-salon:testIamPermissions [none]
+[debug] [2023-12-27T21:25:05.607Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/scissor-haus-salon:testIamPermissions x-goog-quota-user=projects/scissor-haus-salon
+[debug] [2023-12-27T21:25:05.607Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/scissor-haus-salon:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2023-12-27T21:25:05.676Z] <<< [apiv2][status] GET https://firebase-public.firebaseio.com/cli.json 200
+[debug] [2023-12-27T21:25:05.676Z] <<< [apiv2][body] GET https://firebase-public.firebaseio.com/cli.json {"cloudBuildErrorAfter":1594252800000,"cloudBuildWarnAfter":1590019200000,"defaultNode10After":1594252800000,"minVersion":"3.0.5","node8DeploysDisabledAfter":1613390400000,"node8RuntimeDisabledAfter":1615809600000,"node8WarnAfter":1600128000000}
+[debug] [2023-12-27T21:25:05.936Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/scissor-haus-salon:testIamPermissions 200
+[debug] [2023-12-27T21:25:05.936Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/scissor-haus-salon:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2023-12-27T21:25:05.937Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/scissor-haus-salon [none]

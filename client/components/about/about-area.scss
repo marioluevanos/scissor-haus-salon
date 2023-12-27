@@ -1,4 +1,4 @@
-@use "../../assets/scss/utils/_mixins.scss" as *;
+@use "../../styles/utils/_mixins.scss" as *;
 
 .root {
   max-width: 768px;
@@ -58,9 +58,9 @@
   padding: 2rem 2rem;
 
   p {
-    font-family: var(--tp-ff-heading);
+    font-family: "Bodoni Moda";
+    font-style: italic;
     font-size: 3rem;
-    font-weight: 300;
     position: relative;
     color: currentColor;
     margin: 0;
@@ -76,7 +76,7 @@
     &::before {
       content: "“";
       position: absolute;
-      left: 0;
+      left: -0.25em;
     }
     &::after {
       content: "”";
@@ -98,8 +98,8 @@
 
   cite {
     display: block;
-    margin-top: 0.5rem;
-    font-size: 1rem;
+    margin-top: 1rem;
+    font-size: 0.75rem;
     font-style: normal;
   }
 }
