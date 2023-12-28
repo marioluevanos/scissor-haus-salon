@@ -1,6 +1,20 @@
 <script setup lang="ts">
 import { useUtilityStore } from "@/pinia/useUtilityStore";
 const utilityStore = useUtilityStore();
+const video = ref<HTMLVideoElement | null>(null);
+
+function onModalClose() {
+  utilityStore.closeModal();
+}
+
+watch(
+  () => video.value,
+  () => {
+    if (video.value && "play" in video.value) {
+      video.value?.play();
+    }
+  }
+);
 </script>
 
 <template>
@@ -8,22 +22,32 @@ const utilityStore = useUtilityStore();
     v-if="utilityStore.modalId"
     :id="utilityStore.modalId"
     tabindex="-1"
-    class="modal"
+    class="root"
     :aria-labelledby="utilityStore.modalId"
     aria-hidden="true"
   >
-    <div class="modal-dialog modal-dialog-centered">
-      <div class="modal-content">
-        <button
-          type="button"
-          class="tp-product-modal-close-btn"
-          data-bs-toggle="modal"
-          :data-bs-target="`#${utilityStore.modalId}`"
-        >
-          X
-        </button>
-        test
-      </div>
+    <div class="overlay" @click="onModalClose"></div>
+    <button
+      type="button"
+      class="close-button"
+      @click="onModalClose"
+      :data-modal-id="`#${utilityStore.modalId}`"
+    >
+      <SvgClose />
+    </button>
+    <div class="content">
+      <video
+        v-if="utilityStore.modalMediaUrl.endsWith('.mp4')"
+        ref="video"
+        :src="utilityStore.modalMediaUrl"
+        class="media"
+        loop
+      ></video>
+      <img :src="utilityStore.modalMediaUrl" alt="" class="media" />
     </div>
   </div>
 </template>
+
+<style lang="scss" scoped>
+@import "./modal.scss";
+</style>

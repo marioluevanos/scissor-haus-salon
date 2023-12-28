@@ -5,7 +5,7 @@ defineProps(["error"]);
 
 <template>
   <nuxt-layout name="default">
-    <section class="tp-error-area pt-110 pb-110">
+    <section style="padding: 90px 1rem">
       <h5 class="tp-error-title">{{ error.statusCode }} {{ error.message }}</h5>
       <p>
         Whoops, this is embarassing. Looks like the page you were looking for

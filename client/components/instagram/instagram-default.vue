@@ -1,55 +1,52 @@
 <script setup lang="ts">
 import { useUtilityStore } from "@/pinia/useUtilityStore";
 
-const utilityStore = useUtilityStore();
-
-function onMediaClick(event: MouseEvent) {
-  console.log(event, utilityStore.handleOpenModal);
-  utilityStore.handleOpenModal(`product-modal-ass`);
-}
-
-type InstagramPost = {
-  id: number;
+export type InstagramPost = {
   externalLink: string;
   mediaUrl: string;
 };
 
 const instagramPosts: InstagramPost[] = [
   {
-    id: 1,
     externalLink: "https://www.instagram.com/p/Cz9nVDHSqkT/",
     mediaUrl: "/instagram/holidays.mp4",
   },
   {
-    id: 2,
     externalLink: "https://www.instagram.com/reel/CzmJskJPTJ7/",
     mediaUrl: "/instagram/texas_friend.mp4",
   },
   {
-    id: 3,
     externalLink: "https://www.instagram.com/reel/CzPlq2zrWAx/",
     mediaUrl: "/instagram/babe_waves.mp4",
   },
   {
-    id: 4,
     externalLink: "https://www.instagram.com/reel/CyTtX4OxmFO/",
     mediaUrl: "/instagram/color.mp4",
   },
   {
-    id: 5,
     externalLink: "https://www.instagram.com/",
     mediaUrl: "/instagram/logo_patio.jpg",
   },
   {
-    id: 6,
     externalLink: "https://www.instagram.com/",
     mediaUrl: "/instagram/ruthie.jpg",
   },
 ];
+
+const utilityStore = useUtilityStore();
+
+function onMediaClick(event: MouseEvent) {
+  if (event?.target && "dataset" in event.target) {
+    const dataset = event.target.dataset as DOMStringMap;
+    const index = Number(dataset?.index || 0);
+
+    utilityStore.openModal("modal-instagram", instagramPosts[index].mediaUrl);
+  }
+}
 </script>
 
 <template>
-  <article class="root">
+  <article class="root" data-instagram>
     <header class="header">
       <h3 class="title">Follow us on Instagram</h3>
       <p class="subtitle">See our way of life.</p>
@@ -57,8 +54,9 @@ const instagramPosts: InstagramPost[] = [
     <section class="posts">
       <figure
         class="post"
-        v-for="item in instagramPosts"
-        :key="item.id"
+        v-for="(item, index) in instagramPosts"
+        :key="index"
+        :data-index="index"
         @click="onMediaClick"
       >
         <video

@@ -1,14 +1,14 @@
 <script setup lang="ts"></script>
 
 <template>
-  <footer class="root">
+  <footer class="root" data-footer>
     <div class="footer-middle">
       <div class="footer-contact">
         <h4 class="title">Follow Us</h4>
         <div class="social-icons">
           <a
             href="https://www.instagram.com/scissorhaussalon/"
-            class="social-icon"
+            class="icon"
             target="_blank"
             rel="noopener"
           >
@@ -16,7 +16,7 @@
           </a>
           <a
             href="https://www.linkedin.com/in/ruthie-luevanos-083856149/"
-            class="social-icon"
+            class="icon"
             target="_blank"
             rel="noopener"
           >

@@ -1,0 +1,117 @@
+@import "./variables.scss";
+@import "./mixins.scss";
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+html {
+  background: var(--color-bg);
+  box-sizing: border-box;
+  height: 100%;
+  min-height: 100%;
+
+  &.modal-active {
+    overflow: hidden;
+  }
+}
+
+html,
+body {
+  font-family: $font-ui, $font-body;
+  color: var(--color-text);
+  overflow: hidden scroll;
+
+  /* Hide scrollbar for IE, Edge and Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+  scrollbar-width: none; /* Firefox */
+  overflow: -moz-scrollbars-none;
+
+  /* Hide scrollbar for Chrome, Safari and Opera */
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+body {
+  background: var(--color-bg);
+  min-height: 100%;
+  margin: 0;
+
+  ::selection {
+    background: rgba($mango, 1);
+    color: $fig;
+  }
+
+  ::-moz-selection {
+    background: rgba($mango, 1);
+    color: $fig;
+  }
+}
+
+body > #__nuxt {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+
+  header + main {
+    flex: 1;
+  }
+
+  main + footer {
+    flex: 0;
+  }
+}
+
+a {
+  color: currentColor;
+  text-decoration: none;
+
+  @include focus-states;
+}
+
+a,
+button,
+label[for],
+input[type="radio"],
+input[type="checkbox"] {
+  @include tap-highlight;
+}
+
+.sr-only {
+  @include sr-only;
+}
+
+div[class*="not-found"] {
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+}
+
+.icon-button {
+  --size: 1.5rem;
+  width: 2rem;
+  height: 2rem;
+  border: none;
+  background: none;
+  padding: 0;
+  cursor: pointer;
+  color: currentColor;
+
+  @include focus-states;
+
+  * {
+    pointer-events: none;
+  }
+}
+
+@keyframes loading-gradient {
+  0% {
+    background-position: 100% 0%;
+  }
+  100% {
+    background-position: 0% 0%;
+  }
+}

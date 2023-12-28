@@ -1,5 +1,3 @@
-@import "../../styles/utils/_mixins.scss";
-
 .root {
   position: relative;
   z-index: 1;
@@ -47,7 +45,7 @@
   }
 }
 
-.text {
+.root .text {
   z-index: 1;
   text-align: center;
   position: relative;
@@ -71,7 +69,8 @@
     color: currentColor;
     font-family: "Bodoni Moda";
     font-style: italic;
-    font-weight: 400;
+    font-weight: 500;
+    margin: 0 auto 1.5rem;
 
     @include media(3-up) {
       font-size: 72px;
@@ -79,15 +78,9 @@
   }
 
   .button {
-    display: inline-block;
-    margin: 1rem 0;
-    border: 1px solid var(--tp-theme-brown);
-    background: var(--tp-theme-brown);
-    color: white;
-    padding: 0.5rem 2rem;
-
     @include media(3-up) {
       border-color: currentColor;
+      color: currentColor;
       background-color: transparent;
     }
   }

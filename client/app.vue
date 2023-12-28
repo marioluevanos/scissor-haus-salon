@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { useUtilityStore } from "./pinia/useUtilityStore";
+import { useUtilityStore } from "@/pinia/useUtilityStore";
 
 const utilsStore = useUtilityStore();
 const route = useRoute();
@@ -7,7 +7,7 @@ const route = useRoute();
 watch(
   () => route.path,
   () => {
-    utilsStore.removeBackdrop();
+    utilsStore.closeModal();
   }
 );
 </script>
@@ -15,6 +15,6 @@ watch(
 <template>
   <NuxtLayout>
     <NuxtPage />
-    <!-- <ModalInstagram /> -->
+    <ModalInstagram />
   </NuxtLayout>
 </template>

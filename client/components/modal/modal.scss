@@ -1,0 +1,43 @@
+.root {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  overflow: hidden;
+}
+
+.root .overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(black, 0.8);
+}
+
+.root .close-button {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: none;
+  border: none;
+  color: white;
+  z-index: 10;
+  * {
+    pointer-events: none;
+  }
+}
+
+.root .content {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: currentColor;
+  z-index: 0;
+  position: relative;
+}
+
+.root .media {
+  display: block;
+  object-fit: contain;
+  width: 100%;
+  height: 100%;
+}

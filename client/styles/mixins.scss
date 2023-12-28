@@ -1,0 +1,620 @@
+@mixin media($size) {
+  @if $size==1-up {
+    @media (min-width: $media-1) {
+      @content;
+    }
+  } @else if $size==2-up {
+    @media (min-width: $media-2) {
+      @content;
+    }
+  } @else if $size==3-up {
+    @media (min-width: $media-3) {
+      @content;
+    }
+  } @else if $size==4-up {
+    @media (min-width: $media-4) {
+      @content;
+    }
+  } @else if $size==5-up {
+    @media (min-width: $media-5) {
+      @content;
+    }
+  } @else if $size==6-up {
+    @media (min-width: $media-6) {
+      @content;
+    }
+  } @else if $size==7-up {
+    @media (min-width: $media-7) {
+      @content;
+    }
+  } @else if $size==1-down {
+    @media (max-width: #{$media-1 - 1px}) {
+      @content;
+    }
+  } @else if $size==2-down {
+    @media (max-width: #{$media-2 - 1px}) {
+      @content;
+    }
+  } @else if $size==3-down {
+    @media (max-width: #{$media-3 - 1px}) {
+      @content;
+    }
+  } @else if $size==4-down {
+    @media (max-width: #{$media-4 - 1px}) {
+      @content;
+    }
+  } @else if $size==5-down {
+    @media (max-width: #{$media-5 - 1px}) {
+      @content;
+    }
+  } @else if $size==6-down {
+    @media (max-width: #{$media-6 - 1px}) {
+      @content;
+    }
+  } @else if $size==7-down {
+    @media (max-width: #{$media-7 - 1px}) {
+      @content;
+    }
+  }
+}
+
+@mixin font-smoothing() {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+@mixin placeholder {
+  opacity: 1;
+  color: var(--color-text2);
+  opacity: 1;
+  font-weight: 400;
+}
+
+@mixin sr-only {
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  width: 0;
+  height: 0;
+}
+
+@mixin focus-states(
+  $offset: 3px,
+  $color: #{var(--input-border-active)},
+  $outline-width: 1px
+) {
+  &:focus {
+    outline: none;
+  }
+
+  &:focus-visible {
+    outline: $outline-width solid $color;
+    outline-offset: $offset;
+
+    /* Safari only CSS hack */
+    @supports (-webkit-hyphens: none) {
+      outline: none;
+      box-shadow: 0 0 0 1px var(--color-text2);
+    }
+  }
+}
+
+@mixin tap-highlight($color: rgba($mango, 0.16)) {
+  -webkit-tap-highlight-color: $color;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+@mixin input-hints {
+  --hint-v-space: 2rem;
+  user-select: none;
+  display: block;
+  align-items: center;
+  opacity: 1;
+  margin: 0.5rem 0 0;
+  transition: all 0.15s $ease-out-sine 0s;
+
+  &:empty {
+    --hint-v-space: 1rem;
+    opacity: 0;
+    position: absolute;
+    transition: all 0.15s $ease-in-sine 0s;
+  }
+
+  .root.isSuccess &,
+  .root.success & {
+    color: $success;
+  }
+
+  .root.isError &,
+  .root.error & {
+    color: $error;
+    font-weight: 400;
+
+    a {
+      color: inherit;
+      font-weight: 700;
+      text-decoration: none;
+    }
+  }
+
+  .root.disabled & {
+    pointer-events: none;
+    user-select: none;
+    color: var(--input-color-muted);
+  }
+}
+
+@mixin input-states() {
+  outline: none;
+
+  &::placeholder {
+    /* Chrome, Firefox, Opera, Safari 10.1+ */
+    @include placeholder;
+  }
+
+  &:-ms-input-placeholder {
+    /* Internet Explorer 10-11 */
+    @include placeholder;
+  }
+
+  &::-ms-input-placeholder {
+    /* Microsoft Edge */
+    @include placeholder;
+  }
+
+  .isInputActive &:not([disabled]):not([readonly]),
+  &.focus:not([disabled]):not([readonly]):focus {
+    border-color: var(--input-border-active);
+    background: var(--input-bg-active);
+  }
+
+  &:-webkit-autofill,
+  &:-webkit-autofill:hover,
+  &.focus:-webkit-autofill:focus {
+    box-shadow: 0 0 0px 1000px var(--input-bg-active) inset;
+    color: var(--color-text, $fig);
+    -webkit-text-fill-color: var(--color-text, $fig);
+  }
+
+  .hasValue & {
+    --area-size: 42px;
+    background: var(--input-has-value);
+
+    &:-webkit-autofill,
+    &:-webkit-autofill:hover,
+    &.focus:-webkit-autofill:focus {
+      box-shadow: 0 0 0px 1000px var(--input-has-value) inset;
+    }
+  }
+
+  &[disabled],
+  &[readonly] {
+    color: var(--color-text2);
+  }
+
+  &[readonly] {
+    border-color: transparent;
+    background-color: var(--color-bg1);
+  }
+
+  .isSuccess &,
+  .success & {
+    border-color: $success;
+  }
+
+  .isError &,
+  .error & {
+    border-color: $error;
+
+    + .filePicker button {
+      border-color: $error;
+    }
+  }
+
+  .disabled {
+    &,
+    & + .icon {
+      pointer-events: none;
+      user-select: none;
+      color: var(--input-color-muted);
+    }
+  }
+}
+
+@mixin loading {
+  position: relative;
+  background: linear-gradient(
+    90deg,
+    var(--color-bg) 40%,
+    var(--color-bg1) 50%,
+    var(--color-bg) 60%
+  );
+  background-size: 300% 100%;
+  animation: loading-gradient 1s $ease-in-out-sine infinite both;
+}
+
+@mixin loading-gradient {
+  @keyframes loading-gradient {
+    0% {
+      background-position: 100% 0%;
+    }
+    100% {
+      background-position: 0% 0%;
+    }
+  }
+}
+
+@mixin loading-text {
+  content: '';
+  color: transparent;
+  text-shadow: none;
+  background: var(--color-bg2);
+  border-radius: $radius-xsmall;
+  height: 1rem;
+  opacity: 0.15;
+}
+
+@mixin floating-label($has-value: false) {
+  @if ($has-value) {
+    transform: translateY(-50%);
+    background: var(--color-bg);
+    color: var(--color-text2);
+    font-size: var(--body-xsmall);
+    height: 12px;
+    opacity: 1;
+  } @else {
+    font-size: var(--body-medium);
+    font-weight: 400;
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    height: 40px;
+    transition: all 0.15s $ease-in-out-sine;
+    transform: translate3d(0, 0, 0);
+    line-height: 1;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    padding: 0 0 0 1rem;
+    left: calc(1rem - 0.125rem);
+    padding: 0 0.125rem;
+    opacity: 0.66;
+  }
+}
+
+@mixin avatar-dropcap() {
+  display: grid;
+  place-items: center;
+  aspect-ratio: 1;
+  line-height: 1;
+  font-weight: 700;
+  color: currentColor;
+  text-decoration: none;
+  text-transform: uppercase;
+  margin: 0;
+
+  &::before {
+    position: absolute;
+    inset: 0;
+    content: attr(data-avatar);
+    text-transform: lowercase;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: $font-heading;
+    font-weight: 400;
+    font-size: calc(var(--size) * 0.6);
+    line-height: 1;
+    background: none;
+    border: none;
+    transform: translateY(-0.16em);
+    z-index: 1;
+    pointer-events: none;
+  }
+
+  &[data-name='B']::before {
+    transform: translateY(-0.05em);
+  }
+
+  &[data-name='D']::before {
+    transform: translateY(-0.1em) translateX(-1px);
+  }
+
+  &[data-name='F']::before {
+    transform: translateY(-0.05em);
+  }
+
+  &[data-name='G']::before {
+    transform: translateY(-0.225em);
+  }
+
+  &[data-name='H']::before {
+    transform: translateY(-0.07em) translateX(0em);
+  }
+
+  &[data-name='I']::before {
+    transform: translateY(-0.07em);
+  }
+
+  &[data-name='J']::before {
+    transform: translateY(-0.15em) translateX(0.04em);
+  }
+
+  &[data-name='K']::before {
+    transform: translateY(-0.1em);
+  }
+
+  &[data-name='L']::before {
+    transform: translateY(-0.07em);
+  }
+
+  &[data-name='P']::before {
+    transform: translateY(-0.235em) translateX(0.04em);
+  }
+
+  &[data-name='Q']::before {
+    transform: translateY(-0.25em) translateX(-2px);
+  }
+
+  &[data-name='T']::before {
+    transform: translateY(-0.1em);
+  }
+
+  &[data-name='Y']::before {
+    transform: translateY(-0.25em);
+  }
+
+  &[data-name='1'],
+  &[data-name='2'],
+  &[data-name='3'],
+  &[data-name='4'],
+  &[data-name='5'],
+  &[data-name='6'],
+  &[data-name='7'],
+  &[data-name='8'],
+  &[data-name='9'] {
+    &::before {
+      transform: translateY(-0.05em);
+    }
+  }
+}
+
+/* Scrollbar */
+@mixin scrollbar {
+  /* width */
+  &::-webkit-scrollbar {
+    width: 0.5rem;
+    height: 100%;
+  }
+
+  /* Track */
+  &::-webkit-scrollbar-track {
+    background: var(--color-bg);
+    border-radius: $radius-xsmall;
+    border-left: 1.5px solid transparent;
+    border-right: 1.5px solid transparent;
+  }
+
+  /* Handle */
+  &::-webkit-scrollbar-thumb {
+    border: 1px solid transparent;
+    background: var(--success);
+    background-clip: content-box;
+    border-radius: $radius-xsmall;
+  }
+}
+
+@mixin seperator {
+  margin: 1.5rem auto;
+  text-align: center;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  color: var(--color-text2);
+  font-size: var(--body-xsmall);
+  text-transform: uppercase;
+
+  &::before {
+    left: 0;
+  }
+
+  &::after {
+    right: 0;
+  }
+
+  &::before,
+  &::after {
+    content: '';
+    width: 30%;
+    height: 1px;
+    position: absolute;
+    background: var(--color-border1);
+  }
+}
+
+@mixin project-unread($outer-ring: false, $animated: false) {
+  align-items: center;
+  position: relative;
+
+  // DOT
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    width: var(--dot);
+    height: var(--dot);
+    border-radius: var(--dot);
+    box-shadow: if(
+      $outer-ring,
+      0 0 0 calc(var(--dot) - 1px) var(--color-bg1),
+      none
+    );
+    background: $chili;
+  }
+
+  @if ($animated) {
+    $dur: 2;
+    $dir: 3;
+    &::after {
+      animation-timing-function: $ease-in-sine;
+      animation-duration: #{$dur * $dir + 's'};
+      animation-name: project-unread;
+      animation-fill-mode: forwards;
+      animation-iteration-count: infinite;
+    }
+    @keyframes project-unread {
+      0%,
+      #{25/$dir + '%'},
+      #{50/$dir + '%'} {
+        transform: scale(1);
+        background: $chili;
+      }
+      #{50/$dir + '%'} {
+        opacity: 1;
+        background: rgba($chili, 0.5);
+      }
+      #{80/$dir + '%'},
+      #{100/$dir + '%'},
+      100% {
+        transform: scale(3);
+        opacity: 0;
+      }
+    }
+  }
+}
+
+@mixin pro-container {
+  --input-border-color: #{rgba($mango, 0.4)};
+  --input-border-active: #{$mango};
+  background: var(--color-mango-bg);
+  border-radius: $radius-small;
+
+  button[name='PaperClip'][type='Button'][data-icon='PaperClip'] {
+    border-color: var(--input-border-color);
+  }
+}
+
+@mixin accordion-group {
+  .accordionGroup {
+    [data-accordion] {
+      padding: 0;
+      background: var(--color-mango-bg);
+
+      &:not(:last-child) {
+        margin-bottom: 2px;
+      }
+
+      &:first-child {
+        border-radius: $radius-xsmall $radius-xsmall 0 0;
+      }
+      &:last-child {
+        border-radius: 0 0 $radius-xsmall $radius-xsmall;
+      }
+    }
+
+    [data-accordion-header],
+    [data-accordion-content] {
+      padding-left: var(--ui-gutter);
+      padding-right: var(--ui-gutter);
+    }
+
+    [data-accordion-content] {
+      flex-direction: column;
+      display: flex;
+      align-items: stretch;
+      justify-content: flex-start;
+      grid-gap: 1rem 0;
+    }
+
+    [data-accordion-header-text] {
+      font-size: var(--body-large);
+    }
+
+    // Disable State
+    [data-disabled] button[data-accordion-header] {
+      pointer-events: none;
+    }
+
+    [data-disabled] [data-accordion-header-text] {
+      font-size: var(--body-medium);
+      line-height: 1;
+    }
+
+    [data-disabled] dd {
+      height: auto;
+    }
+  }
+
+  .accordionGroup {
+    [data-textarea],
+    [data-input],
+    [data-radio] {
+      --input-border-color: #{rgba($mango, 0.4)};
+      --input-border-active: #{$mango};
+    }
+
+    [data-input] {
+      margin-bottom: 0;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    /**
+     * File Attachment
+     */
+    [data-file-attachment-list] ul li[data-file] {
+      background: var(--color-bg);
+    }
+
+    [data-file-picker-list] {
+      border-color: var(--input-border-color);
+    }
+  }
+}
+
+@mixin list-item {
+  --bullet: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding-left: calc(var(--bullet) + 0.5em);
+  position: relative;
+
+  span {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    padding-right: 1rem;
+    pointer-events: none;
+  }
+
+  // Bullet dot
+  &::before {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    background: currentColor;
+    width: var(--bullet);
+    height: var(--bullet);
+    border-radius: var(--bullet);
+  }
+}
+
+/**
+ * Set negative margins
+ */
+@mixin project-view-offset() {
+  --offset: 1rem;
+  width: calc(100% + var(--offset));
+  margin: 0.5rem 0 calc(var(--offset) * -0.5) calc(var(--offset) * -0.5);
+}

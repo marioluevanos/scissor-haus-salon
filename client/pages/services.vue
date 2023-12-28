@@ -47,12 +47,10 @@ const services = [
 </template>
 
 <style lang="scss" scoped>
-@use "../styles/utils/_mixins.scss" as *;
-
 .title {
-  color: var(--tp-theme-brown);
-  font-size: 1rem;
-  font-weight: 600;
+  color: var(--sky);
+  font-size: var(--heading-xsmall);
+  font-weight: 400;
   margin-bottom: 1rem;
 }
 
@@ -84,8 +82,8 @@ const services = [
 .grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  background-color: var(--tp-grey-2);
-  border: 1px solid var(--tp-grey-2);
+  background-color: var(--color-border);
+  border: 1px solid var(--color-border);
   grid-gap: 1px;
 
   span,

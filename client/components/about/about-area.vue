@@ -26,17 +26,10 @@
         training she has received and continues to receive.
       </p>
     </section>
-    <section class="testimonials">
-      <!-- <h2 class="title">Testimonial</h2> -->
-      <blockquote class="testimonial">
-        <p>Ruthie makes happy hair</p>
-        <cite>Carrie, Pasadena, CA</cite>
-      </blockquote>
-    </section>
 
     <section class="content team">
       <div class="text">
-        <h2 class="title">Team</h2>
+        <h2 class="title">The Team</h2>
         <p>
           Our creative, talented stylists have the knowledge and experience to
           develop personalized looks for any mood, attitude, or lifestyle.

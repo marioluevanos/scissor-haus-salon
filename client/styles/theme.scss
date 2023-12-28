@@ -1,0 +1,47 @@
+/*
+  Light UI
+*/
+:root {
+  --color-bg: white;
+  --color-bg1: hsl(120, 6%, 95%);
+  --color-bg2: #{$cantaloupe};
+  --color-bg3: #{darken($cantaloupe, 1.6%)};
+  --color-bg4: #{darken($cantaloupe, 12%)};
+  --color-mango-bg: hsl(43, 82%, 96%);
+  --color-mango-bg1: hsl(43, 82%, 90%);
+  --color-text: #{lighten($fig, 8%)};
+  --color-text1: #{lighten($fig, 24%)};
+  --color-text2: hsl(0 1% 45% / 1);
+  --color-border: hsl(108, 7%, 94%);
+  --color-border1: hsl(108, 7%, 75%);
+  --color-border2: hsl(105, 2%, 50%);
+  --color-icon: hsl(30, 1%, 37%);
+  --success: #{$success};
+  --success-text: #{$success-text};
+}
+
+/*
+  Dark UI
+*/
+[data-theme="dark"] {
+  --color-bg: #{lighten($fig, 0%)};
+  --color-bg1: #{desaturate(lighten($fig, 4%), 50%)};
+  --color-bg2: #{desaturate(lighten($fig, 12%), 50%)};
+  --color-bg3: #{lighten($fig, 16%)};
+  --color-bg4: #{lighten($fig, 32%)};
+  --color-mango-bg: hsl(41, 37%, 15%);
+  --color-mango-bg1: hsl(41, 37%, 19%);
+  --color-text: #{lighten($cantaloupe, 4%)};
+  --color-text1: #{darken($cantaloupe, 16%)};
+  --color-text2: #{darken($cantaloupe, 24%)};
+  --color-border: #{lighten($fig, 8%)};
+  --color-border1: #{lighten($fig, 12%)};
+  --color-border2: #{lighten($fig, 40%)};
+  --color-icon: var(--color-text2);
+  --success: #{$success};
+  --success-text: #{lighten($success-text, 12%)};
+
+  img {
+    filter: brightness(0.66) contrast(0.9);
+  }
+}

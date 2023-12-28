@@ -1,0 +1,347 @@
+$dur: 0.15s;
+
+button.button,
+a.button {
+  position: relative;
+  height: 2.5rem;
+  padding: 0 1.5rem;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: $sky;
+  color: white;
+  font: var(--font-weight, 400) var(--body-small) / 1 $font-ui;
+  letter-spacing: 0.01em;
+  border: 1px solid transparent;
+  min-width: 4rem;
+  text-decoration: none;
+  box-sizing: border-box;
+  white-space: nowrap;
+  user-select: none;
+  border-radius: 3rem;
+  @include font-smoothing;
+  transition: background $dur $ease-out-sine, color $dur $ease-out-sine,
+    border-color $dur $ease-out-sine;
+
+  @media (hover: hover) {
+    &:hover:not(.disabled) {
+      background: darken($poblano, 8%);
+      border-color: transparent;
+    }
+
+    &:not(.text):not(.disabled):active {
+      background: lighten($poblano, 4%);
+    }
+  }
+
+  &.outlined:not(.text) {
+    color: var(--success-text);
+    background: transparent;
+    border: 1px solid $poblano;
+
+    @media (hover: hover) {
+      &:hover:not(.disabled),
+      &:focus:not(.disabled) {
+        color: var(--success-text);
+        background: rgba(lighten($poblano, 4%), 0.08);
+      }
+
+      &:not(.text):not(.disabled):active {
+        background: transparent;
+      }
+    }
+  }
+
+  &.isLoading {
+    pointer-events: none;
+  }
+
+  &.textCenter {
+    justify-content: center;
+  }
+
+  @include focus-states;
+
+  * {
+    pointer-events: none;
+  }
+}
+
+/*
+Icon Placement (Left, Right)
+--------------------------------- */
+
+.iconRight,
+.iconLeft {
+  --icon-margin: 0.5rem;
+
+  // Text Variant
+  .text & {
+    --icon-margin: 0.25rem;
+    color: currentColor;
+  }
+
+  // Small Variant
+  .small & {
+    --icon-margin: 0.25rem;
+    --size: 0.75rem;
+  }
+
+  .textCenter & {
+    position: absolute;
+  }
+
+  .isLoading & {
+    color: transparent;
+  }
+}
+
+.iconLeft {
+  margin-right: var(--icon-margin);
+}
+
+.iconRight {
+  margin-left: var(--icon-margin);
+}
+
+.textCenter .iconLeft {
+  position: absolute;
+  left: calc(var(--icon-margin) * 3);
+}
+
+.textCenter .iconRight {
+  position: absolute;
+  right: calc(var(--icon-margin) * 3);
+}
+
+.loadingIcon {
+  pointer-events: none;
+  position: absolute;
+  transform-origin: center;
+
+  path {
+    @for $n from 1 through 9 {
+      &:nth-child(#{$n}) {
+        animation: pulse 1s linear infinite #{$n * 0.125s};
+        animation-play-state: paused;
+      }
+    }
+  }
+
+  .button.isLoading & path {
+    animation-play-state: running;
+  }
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/*
+Small Button Size
+--------------------------------- */
+
+.button.small {
+  height: 32px;
+  font-size: var(--body-xsmall);
+  font-weight: 600;
+  letter-spacing: 0;
+  padding: 0 1rem;
+  min-width: 0;
+  @include font-smoothing;
+}
+
+/*
+Ghost Style
+--------------------------------- */
+
+.button.ghost {
+  color: var(--color-text);
+  background: var(--color-border);
+  border: 1px solid var(--color-border);
+
+  @media (hover: hover) {
+    &:hover:not(.disabled),
+    &:focus:not(.disabled) {
+      color: var(--color-text);
+      background: var(--color-bg2);
+      border-color: var(--color-bg2);
+    }
+
+    &:not(.text):not(.disabled):active {
+      background: var(--color-bg4);
+    }
+  }
+
+  &.outlined:not(.text) {
+    color: var(--color-text2);
+    background: transparent;
+    border: 1px solid var(--color-border2);
+
+    @media (hover: hover) {
+      &:hover:not(.disabled),
+      &:focus:not(.disabled) {
+        background: var(--color-bg1);
+        color: var(--color-text);
+        border-color: var(--color-text);
+      }
+
+      &:not(.text):not(.disabled):active {
+        background: transparent;
+      }
+    }
+  }
+}
+
+/*
+Secondary Style
+--------------------------------- */
+
+.button.secondary {
+  color: $fig;
+  background: $mango;
+  border: 1px solid $mango;
+
+  @media (hover: hover) {
+    &:hover:not([disabled]),
+    &:focus:not([disabled]) {
+      color: $fig;
+      background: lighten($mango, 16%);
+      border-color: lighten($mango, 16%);
+    }
+
+    &:not(.text):not([disabled]):active {
+      background: lighten($mango, 24%);
+    }
+  }
+
+  &.outlined:not(.text) {
+    color: darken($mango, 8%);
+    background: transparent;
+    border: 1px solid darken($mango, 8%);
+
+    @media (hover: hover) {
+      &:hover:not([disabled]),
+      &:focus:not([disabled]) {
+        background: rgba($mango, 0.24);
+        color: darken($mango, 16%);
+        border-color: $mango;
+      }
+
+      &:not(.text):not(.disabled):active {
+        background: transparent;
+      }
+    }
+  }
+}
+
+/*
+Tertiary Style
+--------------------------------- */
+
+.button.tertiary {
+  color: var(--color-bg);
+  background: $chili;
+  border: 1px solid $chili;
+
+  @media (hover: hover) {
+    &:hover:not(.disabled),
+    &:focus:not(.disabled) {
+      color: var(--color-bg);
+      background: darken($chili, 16%);
+      border-color: darken($chili, 16%);
+    }
+
+    &:not(.text):not(.disabled):active {
+      background: lighten($chili, 24%);
+    }
+  }
+
+  &.outlined:not(.text) {
+    color: $chili;
+    background: transparent;
+    border: 1px solid $chili;
+
+    @media (hover: hover) {
+      &:hover:not(.disabled),
+      &:focus:not(.disabled) {
+        background: rgba($chili, 0.24);
+        color: darken($chili, 16%);
+        border-color: $chili;
+      }
+
+      &:not(.text):not(.disabled):active {
+        background: transparent;
+      }
+    }
+  }
+}
+
+/*
+Text Button
+--------------------------------- */
+
+.button.text {
+  height: auto;
+  font-weight: var(--font-weight, 600);
+  text-decoration: none;
+  display: inline-flex;
+  text-decoration: none;
+  padding: 0;
+  border: none;
+  min-width: 0;
+  border-radius: var(--body-small);
+  white-space: normal;
+  background: transparent;
+  color: currentColor;
+
+  .buttonText {
+    background: linear-gradient(to bottom, currentColor 0%, currentColor 100%)
+      100% 100%/0% 1px no-repeat;
+    transition: background-size $dur $ease-in-sine 0s,
+      color $dur $ease-in-sine 0s;
+  }
+
+  @media (hover: hover) {
+    &:hover:not(.disabled),
+    :focus:not(.disabled) & {
+      background: transparent;
+      .buttonText {
+        background: linear-gradient(
+            to bottom,
+            currentColor 0%,
+            currentColor 100%
+          )
+          0% 100%/100% 1px no-repeat;
+        transition: background-size $dur * 2 $ease-out-sine 0s,
+          color $dur * 2 $ease-out-sine 0s;
+      }
+    }
+  }
+}
+
+/*
+Disabled State
+--------------------------------- */
+
+.button.disabled[disabled] {
+  cursor: not-allowed;
+  color: var(--color-text2);
+
+  &.outlined:not(.text) {
+    border-color: var(--color-bg2);
+    color: var(--color-bg2);
+    background: transparent;
+  }
+
+  &:not(.text) {
+    border-color: var(--color-bg2);
+    background-color: var(--color-bg2);
+  }
+}

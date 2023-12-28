@@ -1,0 +1,104 @@
+/**
+* DO NOT DIRECTLY EDIT THIS FILE
+* THIS FILE IS AUTO GENERATED
+* SEE /public/tokens.json FOR SOURCE
+*/
+
+/**
+ * Typopgraphy Heading
+ */
+
+$heading-xlarge: 56px;
+$heading-large: 48px;
+$heading-medium: 40px;
+$heading-small: 30px;
+$heading-xsmall: 20px;
+
+/**
+ * Typopgraphy Body
+ */
+
+$body-xlarge: 24px;
+$body-large: 18px;
+$body-medium: 16px;
+$body-small: 14px;
+$body-xsmall: 12px;
+$body-xxsmall: 10px;
+
+/**
+ * Brand Colors
+ */
+
+$mango: #f2b826;
+$chili: #ea4033;
+$poblano: #718f73;
+$olive: #fee7dd;
+$fig: #1b1a18;
+$sky: #6084ae;
+$cantaloupe: #fffdf0;
+
+/**
+ * UI Colors
+ */
+
+$success: #05ae11;
+$success-text: #0a7611;
+$error: #ef0000;
+$warning: #ffd600;
+$info: #2156ea;
+
+/**
+ * Font
+ */
+
+$font-body: Jost, "Roboto", "Helvetica", "Arial", sans-serif;
+$font-heading: "Bodoni Moda", serif;
+$font-ui: Jost, "Roboto", sans-serif;
+
+/**
+ * Breakpoints
+ */
+
+$media-1: 375px;
+$media-2: 540px;
+$media-3: 768px;
+$media-4: 1024px;
+$media-5: 1280px;
+$media-6: 1440px;
+$media-7: 1920px;
+
+/**
+ * Corner Radius
+ */
+
+$radius-xxsmall: 2px;
+$radius-xsmall: 4px;
+$radius-small: 8px;
+$radius-medium: 12px;
+$radius-large: 16px;
+
+/**
+ * Easing
+ */
+
+$ease-in-sine: cubic-bezier(0.47, 0, 0.745, 0.715);
+$ease-out-sine: cubic-bezier(0.39, 0.575, 0.565, 1);
+$ease-in-out-sine: cubic-bezier(0.445, 0.05, 0.55, 0.95);
+$ease-in-expo: cubic-bezier(0.95, 0.05, 0.795, 0.035);
+$ease-out-expo: cubic-bezier(0.19, 1, 0.22, 1);
+$ease-in-out-expo: cubic-bezier(1, 0, 0, 1);
+$ease-in-cube: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+$ease-out-cube: cubic-bezier(0.215, 0.61, 0.355, 1);
+
+/**
+ * UI
+ */
+
+$ui-maxw-xlarge: 1280px;
+$ui-maxw-large: 1024px;
+$ui-maxw-medium: 768px;
+$ui-maxw-small: 540px;
+$ui-maxw-xsmall: 320px;
+$ui-header-h: 3rem;
+$ui-section-p: 1.5rem;
+$ui-gutter: 1rem;
