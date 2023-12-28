@@ -5,10 +5,10 @@
   "main": "index.js",
   "scripts": {
     "dev": "cd client && npm run dev",
-    "build": ".tools/generate.sh",
+    "build": "./scripts/build/generate.sh",
     "deploy": "firebase deploy && npm run cleanpublic",
     "cleanpublic": "rm -r -f public/*",
-    "generate-tokens": "./tokens/call.sh"
+    "generate-tokens": "./scripts/tokens/call.sh"
   },
   "keywords": [],
   "author": "",

@@ -1,0 +1,1 @@
+import{d as t,u as a,o as n,c as o,t as s}from"./entry.55f17dae.js";const p=t({__name:"[name]",setup(r){return a({title:"Stylist Page"}),(e,l)=>(n(),o("div",null,s(e.$route.params.name),1))}});export{p as default};
