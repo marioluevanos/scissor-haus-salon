@@ -44,7 +44,7 @@
     content: "";
     position: absolute;
     inset: 0;
-    background: var(--olive);
+    background: var(--color-bg4);
     border-radius: var(--radius-large);
     z-index: 0;
   }

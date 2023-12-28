@@ -26,7 +26,7 @@
   .has-hero & {
     border-bottom: none;
     @include media(3-up) {
-      color: var(--color-bg);
+      color: white;
       border-bottom: 1px solid rgba(white, 0.16);
     }
   }

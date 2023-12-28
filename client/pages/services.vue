@@ -48,7 +48,7 @@ const services = [
 
 <style lang="scss" scoped>
 .title {
-  color: var(--sky);
+  color: var(--color-primary);
   font-size: var(--heading-xsmall);
   font-weight: 400;
   margin-bottom: 1rem;
@@ -61,7 +61,7 @@ const services = [
 .services {
   max-width: 768px;
   margin: auto;
-  color: black;
+  color: var(--color-text);
   padding: 90px 1rem 4rem;
   margin: auto;
   min-height: 100vh;
@@ -72,8 +72,8 @@ const services = [
   line-height: 1.5;
   font-weight: 400;
   margin: 0;
-  background: white;
-  padding: 1rem 0.5rem;
+  background: var(--color-bg);
+  padding: 1rem 1rem;
   @include font-smoothing;
   display: flex;
   align-items: center;
@@ -89,10 +89,6 @@ const services = [
   span,
   a {
     display: block;
-  }
-
-  a {
-    color: var(--tp-theme-brown);
   }
 }
 </style>

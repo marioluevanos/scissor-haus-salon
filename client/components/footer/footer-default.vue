@@ -5,27 +5,29 @@
     <div class="footer-middle footer-section">
       <div class="footer-contact">
         <h4 class="title">Follow Us</h4>
-        <div class="social-icons">
+        <p class="footer-contact-item">
+          <SvgInstagram class="icon" />
           <a
             href="https://www.instagram.com/scissorhaussalon/"
-            class="icon social-icon"
             target="_blank"
             rel="noopener"
           >
-            <SvgInstagram />
+            Instagram
           </a>
+        </p>
+        <p class="footer-contact-item">
+          <SvgLinkedIn class="icon" />
           <a
             href="https://www.linkedin.com/in/ruthie-luevanos-083856149/"
-            class="icon social-icon"
             target="_blank"
             rel="noopener"
           >
-            <SvgLinkedIn />
+            LinkedIn
           </a>
-        </div>
+        </p>
       </div>
 
-      <div class="footer-contact footer-section">
+      <div class="footer-contact">
         <h4 class="title">Find Us</h4>
         <p class="footer-contact-item">
           <SvgLocation class="icon location" />
@@ -59,7 +61,6 @@
       <p class="copyright">
         ©{{ new Date().getFullYear() }} All Rights Reserved
       </p>
-      <img class="footer-pay" src="/footer/footer-pay.png" alt="pay-img" />
     </div>
   </footer>
 </template>

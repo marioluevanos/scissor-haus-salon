@@ -1,10 +1,10 @@
-$text: rgba(white, 0.7);
+$text: #{var(--color-text)};
 
 .root {
   position: relative;
   margin: auto;
   background: var(--color-bg1);
-  color: white;
+  color: $text;
   padding: var(--ui-section-p) var(--ui-gutter);
   width: 100%;
 }
@@ -13,27 +13,6 @@ $text: rgba(white, 0.7);
   margin-bottom: 1rem;
   font-size: var(--heading-xsmall);
   font-weight: 400;
-}
-
-.social-icons {
-  position: relative;
-  display: flex;
-  grid-gap: 1.5rem;
-}
-
-.root a.social-icon {
-  width: 2rem;
-  height: 2rem;
-  border-radius: 0.25rem;
-  border: 1px solid rgba($text, 0.2);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  svg {
-    width: 1rem;
-    height: 1rem;
-  }
 }
 
 .footer-contact {
@@ -65,6 +44,7 @@ $text: rgba(white, 0.7);
   max-width: var(--ui-maxw-medium);
   margin-left: auto;
   margin-right: auto;
+  width: 100%;
 }
 
 .root .icon {
@@ -112,7 +92,7 @@ $text: rgba(white, 0.7);
 
   .copyright {
     font-size: var(--body-xsmall);
-    color: var(--color-text2);
+    color: $text;
     margin: 0;
     white-space: nowrap;
     flex: 1;

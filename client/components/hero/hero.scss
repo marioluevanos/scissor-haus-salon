@@ -50,7 +50,7 @@
   text-align: center;
   position: relative;
   padding: 1.5rem 1rem;
-  color: black;
+  color: var(--color-text);
 
   @include media(3-up) {
     color: white;

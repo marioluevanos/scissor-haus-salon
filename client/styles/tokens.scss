@@ -9,11 +9,11 @@
  */
 
 :root {
-	--heading-xlarge: #{$heading-xlarge};
-	--heading-large: #{$heading-large};
-	--heading-medium: #{$heading-medium};
-	--heading-small: #{$heading-small};
-	--heading-xsmall: #{$heading-xsmall};
+  --heading-xlarge: #{$heading-xlarge};
+  --heading-large: #{$heading-large};
+  --heading-medium: #{$heading-medium};
+  --heading-small: #{$heading-small};
+  --heading-xsmall: #{$heading-xsmall};
 }
 
 /**
@@ -21,12 +21,12 @@
  */
 
 :root {
-	--body-xlarge: #{$body-xlarge};
-	--body-large: #{$body-large};
-	--body-medium: #{$body-medium};
-	--body-small: #{$body-small};
-	--body-xsmall: #{$body-xsmall};
-	--body-xxsmall: #{$body-xxsmall};
+  --body-xlarge: #{$body-xlarge};
+  --body-large: #{$body-large};
+  --body-medium: #{$body-medium};
+  --body-small: #{$body-small};
+  --body-xsmall: #{$body-xsmall};
+  --body-xxsmall: #{$body-xxsmall};
 }
 
 /**
@@ -34,13 +34,13 @@
  */
 
 :root {
-	--mango: #{$mango};
-	--chili: #{$chili};
-	--poblano: #{$poblano};
-	--olive: #{$olive};
-	--fig: #{$fig};
-	--sky: #{$sky};
-	--cantaloupe: #{$cantaloupe};
+  --mango: #{$mango};
+  --chili: #{$chili};
+  --poblano: #{$poblano};
+  --olive: #{$olive};
+  --fig: #{$fig};
+  --sky: #{$sky};
+  --cantaloupe: #{$cantaloupe};
 }
 
 /**
@@ -48,11 +48,11 @@
  */
 
 :root {
-	--success: #{$success};
-	--success-text: #{$success-text};
-	--error: #{$error};
-	--warning: #{$warning};
-	--info: #{$info};
+  --success: #{$success};
+  --success-text: #{$success-text};
+  --error: #{$error};
+  --warning: #{$warning};
+  --info: #{$info};
 }
 
 /**
@@ -60,9 +60,9 @@
  */
 
 :root {
-	--font-body: #{$font-body};
-	--font-heading: #{$font-heading};
-	--font-ui: #{$font-ui};
+  --font-body: #{$font-body};
+  --font-heading: #{$font-heading};
+  --font-ui: #{$font-ui};
 }
 
 /**
@@ -70,13 +70,13 @@
  */
 
 :root {
-	--media-1: #{$media-1};
-	--media-2: #{$media-2};
-	--media-3: #{$media-3};
-	--media-4: #{$media-4};
-	--media-5: #{$media-5};
-	--media-6: #{$media-6};
-	--media-7: #{$media-7};
+  --media-1: #{$media-1};
+  --media-2: #{$media-2};
+  --media-3: #{$media-3};
+  --media-4: #{$media-4};
+  --media-5: #{$media-5};
+  --media-6: #{$media-6};
+  --media-7: #{$media-7};
 }
 
 /**
@@ -84,11 +84,11 @@
  */
 
 :root {
-	--radius-xxsmall: #{$radius-xxsmall};
-	--radius-xsmall: #{$radius-xsmall};
-	--radius-small: #{$radius-small};
-	--radius-medium: #{$radius-medium};
-	--radius-large: #{$radius-large};
+  --radius-xxsmall: #{$radius-xxsmall};
+  --radius-xsmall: #{$radius-xsmall};
+  --radius-small: #{$radius-small};
+  --radius-medium: #{$radius-medium};
+  --radius-large: #{$radius-large};
 }
 
 /**
@@ -96,14 +96,14 @@
  */
 
 :root {
-	--ease-in-sine: #{$ease-in-sine};
-	--ease-out-sine: #{$ease-out-sine};
-	--ease-in-out-sine: #{$ease-in-out-sine};
-	--ease-in-expo: #{$ease-in-expo};
-	--ease-out-expo: #{$ease-out-expo};
-	--ease-in-out-expo: #{$ease-in-out-expo};
-	--ease-in-cube: #{$ease-in-cube};
-	--ease-out-cube: #{$ease-out-cube};
+  --ease-in-sine: #{$ease-in-sine};
+  --ease-out-sine: #{$ease-out-sine};
+  --ease-in-out-sine: #{$ease-in-out-sine};
+  --ease-in-expo: #{$ease-in-expo};
+  --ease-out-expo: #{$ease-out-expo};
+  --ease-in-out-expo: #{$ease-in-out-expo};
+  --ease-in-cube: #{$ease-in-cube};
+  --ease-out-cube: #{$ease-out-cube};
 }
 
 /**
@@ -111,13 +111,12 @@
  */
 
 :root {
-	--ui-maxw-xlarge: #{$ui-maxw-xlarge};
-	--ui-maxw-large: #{$ui-maxw-large};
-	--ui-maxw-medium: #{$ui-maxw-medium};
-	--ui-maxw-small: #{$ui-maxw-small};
-	--ui-maxw-xsmall: #{$ui-maxw-xsmall};
-	--ui-header-h: #{$ui-header-h};
-	--ui-section-p: #{$ui-section-p};
-	--ui-gutter: #{$ui-gutter};
+  --ui-maxw-xlarge: #{$ui-maxw-xlarge};
+  --ui-maxw-large: #{$ui-maxw-large};
+  --ui-maxw-medium: #{$ui-maxw-medium};
+  --ui-maxw-small: #{$ui-maxw-small};
+  --ui-maxw-xsmall: #{$ui-maxw-xsmall};
+  --ui-header-h: #{$ui-header-h};
+  --ui-section-p: #{$ui-section-p};
+  --ui-gutter: #{$ui-gutter};
 }
-
