@@ -46,37 +46,26 @@ function onMediaClick(event: MouseEvent) {
 </script>
 
 <template>
-  <article class="root" data-instagram>
-    <header class="header">
-      <h3 class="title">Follow us on Instagram</h3>
-      <p class="subtitle">See our way of life.</p>
-    </header>
-    <section class="posts">
-      <figure
-        class="post"
-        v-for="(item, index) in instagramPosts"
-        :key="index"
-        :data-index="index"
-        @click="onMediaClick"
-      >
-        <video
-          v-if="item.mediaUrl.endsWith('.mp4')"
-          :src="item.mediaUrl"
-          class="media"
-          type="video/mp4"
-        />
-        <img v-else :src="item.mediaUrl" alt="media" class="media" />
-        <a
-          :href="item.externalLink"
-          class="icon"
-          target="_blank"
-          rel="noopener"
-        >
-          <SvgInstagram />
-        </a>
-      </figure>
-    </section>
-  </article>
+  <section class="posts">
+    <figure
+      class="post"
+      v-for="(item, index) in instagramPosts"
+      :key="index"
+      :data-index="index"
+      @click="onMediaClick"
+    >
+      <video
+        v-if="item.mediaUrl.endsWith('.mp4')"
+        :src="item.mediaUrl"
+        class="media"
+        type="video/mp4"
+      />
+      <img v-else :src="item.mediaUrl" alt="media" class="media" />
+      <a :href="item.externalLink" class="icon" target="_blank" rel="noopener">
+        <SvgInstagram />
+      </a>
+    </figure>
+  </section>
 </template>
 
 <style scoped lang="scss">

@@ -3,7 +3,7 @@
 */
 :root {
   --color-bg: white;
-  --color-bg1: hsl(120, 6%, 95%);
+  --color-bg1: hsl(0, 0%, 0%);
   --color-bg2: #{$cantaloupe};
   --color-bg3: #{darken($cantaloupe, 1.6%)};
   --color-bg4: #{darken($cantaloupe, 12%)};
@@ -12,9 +12,9 @@
   --color-text: #{lighten($fig, 8%)};
   --color-text1: #{lighten($fig, 24%)};
   --color-text2: hsl(0 1% 45% / 1);
-  --color-border: hsl(108, 7%, 94%);
-  --color-border1: hsl(108, 7%, 75%);
-  --color-border2: hsl(105, 2%, 50%);
+  --color-border: hsl(108, 0%, 94%);
+  --color-border1: hsl(108, 0%, 80%);
+  --color-border2: hsl(105, 0%, 66%);
   --color-icon: hsl(30, 1%, 37%);
   --success: #{$success};
   --success-text: #{$success-text};

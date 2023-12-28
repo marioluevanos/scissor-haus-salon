@@ -5,5 +5,5 @@
 </template>
 
 <script setup lang="ts">
-defineProps<{ msg: string | undefined}>();
+defineProps<{ msg: string | undefined }>();
 </script>

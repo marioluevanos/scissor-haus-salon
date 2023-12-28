@@ -12,7 +12,7 @@
   color: black;
   margin: auto;
   position: relative;
-  padding: 2rem 2rem;
+  padding: 4rem 2rem;
 
   p {
     font-size: var(--heading-medium);
@@ -34,8 +34,6 @@
     }
     &::before {
       content: "“";
-      position: absolute;
-      left: -0.25em;
     }
     &::after {
       content: "”";
@@ -47,7 +45,7 @@
     position: absolute;
     inset: 0;
     background: var(--olive);
-    border-radius: 8px;
+    border-radius: var(--radius-large);
     z-index: 0;
   }
 

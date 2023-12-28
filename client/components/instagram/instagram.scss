@@ -1,27 +1,5 @@
-.root {
-  padding: var(--ui-section-p) var(--ui-gutter);
-  max-width: var(--ui-maxw-medium);
-  margin: auto;
-}
-
-.header {
-  text-align: center;
-  padding-bottom: 1.5rem;
-}
-
-.title {
-  font-size: var(--heading-xsmall);
-  font-weight: 400;
-}
-
-.subtitle {
-  color: var(--color-text2);
-}
-
 .posts {
   grid-gap: 1rem;
-  max-width: var(--ui-maxw-medium);
-  margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr 1fr;
 

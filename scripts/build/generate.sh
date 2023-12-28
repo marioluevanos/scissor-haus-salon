@@ -1,5 +1,6 @@
 #! /bin/bash
 
+npm run generate-tokens
 cd client
 npm run generate
 cd ..

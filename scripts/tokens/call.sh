@@ -1,3 +1,3 @@
 #! /bin/bash
-npx ts-node --transpileOnly ${PWD}/tokens/generate.ts
+npx ts-node --transpileOnly ${PWD}/scripts/tokens/generate.ts
 

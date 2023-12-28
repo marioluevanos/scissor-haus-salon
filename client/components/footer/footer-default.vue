@@ -2,13 +2,13 @@
 
 <template>
   <footer class="root" data-footer>
-    <div class="footer-middle">
+    <div class="footer-middle footer-section">
       <div class="footer-contact">
         <h4 class="title">Follow Us</h4>
         <div class="social-icons">
           <a
             href="https://www.instagram.com/scissorhaussalon/"
-            class="icon"
+            class="icon social-icon"
             target="_blank"
             rel="noopener"
           >
@@ -16,7 +16,7 @@
           </a>
           <a
             href="https://www.linkedin.com/in/ruthie-luevanos-083856149/"
-            class="icon"
+            class="icon social-icon"
             target="_blank"
             rel="noopener"
           >
@@ -25,7 +25,7 @@
         </div>
       </div>
 
-      <div class="footer-contact">
+      <div class="footer-contact footer-section">
         <h4 class="title">Find Us</h4>
         <p class="footer-contact-item">
           <SvgLocation class="icon location" />
@@ -55,7 +55,7 @@
       </div>
     </div>
 
-    <div class="footer-bottom">
+    <div class="footer-bottom footer-section">
       <p class="copyright">
         ©{{ new Date().getFullYear() }} All Rights Reserved
       </p>

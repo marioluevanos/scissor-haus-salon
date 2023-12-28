@@ -29,7 +29,7 @@ watch(
     <div class="overlay" @click="onModalClose"></div>
     <button
       type="button"
-      class="close-button"
+      class="close-button icon-button"
       @click="onModalClose"
       :data-modal-id="`#${utilityStore.modalId}`"
     >
@@ -42,8 +42,9 @@ watch(
         :src="utilityStore.modalMediaUrl"
         class="media"
         loop
+        controls
       ></video>
-      <img :src="utilityStore.modalMediaUrl" alt="" class="media" />
+      <img v-else :src="utilityStore.modalMediaUrl" alt="" class="media" />
     </div>
   </div>
 </template>

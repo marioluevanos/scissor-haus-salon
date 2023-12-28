@@ -46,9 +46,6 @@
         </p>
       </div>
     </section>
-    <div class="cta">
-      <nuxt-link href="/services" class="button">See Our Services</nuxt-link>
-    </div>
   </section>
 </template>
 

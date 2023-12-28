@@ -82,6 +82,12 @@
       border-color: currentColor;
       color: currentColor;
       background-color: transparent;
+
+      &:hover {
+        color: black;
+        border-color: white;
+        background: white;
+      }
     }
   }
 }

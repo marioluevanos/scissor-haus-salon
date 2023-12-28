@@ -51,9 +51,9 @@ $info: #2156ea;
  * Font
  */
 
-$font-body: Jost, "Roboto", "Helvetica", "Arial", sans-serif;
-$font-heading: "Bodoni Moda", serif;
-$font-ui: Jost, "Roboto", sans-serif;
+$font-body: Jost, 'Roboto', 'Helvetica', 'Arial', sans-serif;
+$font-heading: 'Bodoni Moda', serif;
+$font-ui: Jost, 'Roboto', sans-serif;
 
 /**
  * Breakpoints
@@ -100,5 +100,6 @@ $ui-maxw-medium: 768px;
 $ui-maxw-small: 540px;
 $ui-maxw-xsmall: 320px;
 $ui-header-h: 3rem;
-$ui-section-p: 1.5rem;
+$ui-section-p: 2rem;
 $ui-gutter: 1rem;
+

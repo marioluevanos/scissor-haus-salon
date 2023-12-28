@@ -42,13 +42,13 @@ body {
   margin: 0;
 
   ::selection {
-    background: rgba($mango, 1);
-    color: $fig;
+    background: rgba($sky, 1);
+    color: $olive;
   }
 
   ::-moz-selection {
-    background: rgba($mango, 1);
-    color: $fig;
+    background: rgba($sky, 1);
+    color: $olive;
   }
 }
 
@@ -85,11 +85,6 @@ input[type="checkbox"] {
   @include sr-only;
 }
 
-div[class*="not-found"] {
-  padding-top: 2.5rem;
-  padding-bottom: 2.5rem;
-}
-
 .icon-button {
   --size: 1.5rem;
   width: 2rem;
@@ -104,14 +99,5 @@ div[class*="not-found"] {
 
   * {
     pointer-events: none;
-  }
-}
-
-@keyframes loading-gradient {
-  0% {
-    background-position: 100% 0%;
-  }
-  100% {
-    background-position: 0% 0%;
   }
 }

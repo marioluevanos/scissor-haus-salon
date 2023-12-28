@@ -25,29 +25,29 @@ a.button {
     border-color $dur $ease-out-sine;
 
   @media (hover: hover) {
-    &:hover:not(.disabled) {
-      background: darken($poblano, 8%);
+    &:hover {
+      background: darken($sky, 8%);
       border-color: transparent;
     }
 
-    &:not(.text):not(.disabled):active {
-      background: lighten($poblano, 4%);
+    &:active {
+      background: lighten($sky, 4%);
     }
   }
 
-  &.outlined:not(.text) {
-    color: var(--success-text);
+  &.outlined {
+    color: $sky;
     background: transparent;
-    border: 1px solid $poblano;
+    border: 1px solid $sky;
 
     @media (hover: hover) {
-      &:hover:not(.disabled),
-      &:focus:not(.disabled) {
-        color: var(--success-text);
-        background: rgba(lighten($poblano, 4%), 0.08);
+      &:hover,
+      &:focus {
+        color: $sky;
+        background: rgba(lighten($sky, 4%), 0.08);
       }
 
-      &:not(.text):not(.disabled):active {
+      &:active {
         background: transparent;
       }
     }
@@ -167,32 +167,32 @@ Ghost Style
   border: 1px solid var(--color-border);
 
   @media (hover: hover) {
-    &:hover:not(.disabled),
-    &:focus:not(.disabled) {
+    &:hover,
+    &:focus {
       color: var(--color-text);
       background: var(--color-bg2);
       border-color: var(--color-bg2);
     }
 
-    &:not(.text):not(.disabled):active {
+    &:active {
       background: var(--color-bg4);
     }
   }
 
-  &.outlined:not(.text) {
+  &.outlined {
     color: var(--color-text2);
     background: transparent;
     border: 1px solid var(--color-border2);
 
     @media (hover: hover) {
-      &:hover:not(.disabled),
-      &:focus:not(.disabled) {
+      &:hover,
+      &:focus {
         background: var(--color-bg1);
         color: var(--color-text);
         border-color: var(--color-text);
       }
 
-      &:not(.text):not(.disabled):active {
+      &:not(.text):active {
         background: transparent;
       }
     }
@@ -263,7 +263,7 @@ Tertiary Style
     }
   }
 
-  &.outlined:not(.text) {
+  &.outlined {
     color: $chili;
     background: transparent;
     border: 1px solid $chili;
@@ -301,27 +301,18 @@ Text Button
   background: transparent;
   color: currentColor;
 
-  .buttonText {
-    background: linear-gradient(to bottom, currentColor 0%, currentColor 100%)
-      100% 100%/0% 1px no-repeat;
-    transition: background-size $dur $ease-in-sine 0s,
-      color $dur $ease-in-sine 0s;
-  }
+  background: linear-gradient(to bottom, currentColor 0%, currentColor 100%)
+    100% 100%/0% 1px no-repeat;
+  transition: background-size $dur $ease-in-sine 0s, color $dur $ease-in-sine 0s;
 
   @media (hover: hover) {
     &:hover:not(.disabled),
     :focus:not(.disabled) & {
       background: transparent;
-      .buttonText {
-        background: linear-gradient(
-            to bottom,
-            currentColor 0%,
-            currentColor 100%
-          )
-          0% 100%/100% 1px no-repeat;
-        transition: background-size $dur * 2 $ease-out-sine 0s,
-          color $dur * 2 $ease-out-sine 0s;
-      }
+      background: linear-gradient(to bottom, currentColor 0%, currentColor 100%)
+        0% 100%/100% 1px no-repeat;
+      transition: background-size $dur * 2 $ease-out-sine 0s,
+        color $dur * 2 $ease-out-sine 0s;
     }
   }
 }

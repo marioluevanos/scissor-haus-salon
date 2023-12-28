@@ -22,7 +22,7 @@ export type TokenOutput = {
 
 export type TokenOutputExtension = "css" | "scss";
 
-readFile(process.cwd() + "/tokens/tokens.json", "utf8", onReadFile);
+readFile(process.cwd() + "/scripts/tokens/tokens.json", "utf8", onReadFile);
 
 /**
  * On Read file callback
