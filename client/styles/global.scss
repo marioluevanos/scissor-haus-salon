@@ -101,3 +101,12 @@ input[type="checkbox"] {
     pointer-events: none;
   }
 }
+
+.cta {
+  text-align: center;
+  margin: 2.5rem auto 5rem;
+
+  .button {
+    margin: auto;
+  }
+}

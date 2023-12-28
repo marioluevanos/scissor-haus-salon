@@ -16,7 +16,9 @@ onUnmounted(() => {
       <img src="/about/about-big-1.jpg" alt="Hero" />
     </figure>
     <div class="text">
-      <h1 class="title">Unlock Your Hair's Potential</h1>
+      <Text size="heading-small" class="title"
+        >Unlock Your Hair's Potential</Text
+      >
       <nuxt-link href="/about" class="button">Read More</nuxt-link>
     </div>
   </section>

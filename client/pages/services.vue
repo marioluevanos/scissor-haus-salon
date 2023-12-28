@@ -43,6 +43,9 @@ const services = [
         <span v-else>{{ s.text }}</span>
       </p>
     </div>
+    <div class="cta">
+      <nuxt-link href="/about" class="button">Learn More</nuxt-link>
+    </div>
   </section>
 </template>
 
