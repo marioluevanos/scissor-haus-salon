@@ -73,12 +73,13 @@
     margin: 0 auto 1.5rem;
 
     @include media(3-up) {
-      font-size: 72px;
+      font-size: var(--heading-xxlarge);
     }
   }
 
   .button {
     @include media(3-up) {
+      margin: 0 auto;
       border-color: currentColor;
       color: currentColor;
       background-color: transparent;
