@@ -1,1 +1,0 @@
-import{d as t,u as a,r as o,o as n,c,a as r}from"./entry.55f17dae.js";const m=t({__name:"contact",setup(s){return a({title:"Contact Page"}),(_,p)=>{const e=o("contact-area");return n(),c("div",null,[r(e)])}}});export{m as default};
