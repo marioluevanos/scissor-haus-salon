@@ -3,7 +3,7 @@
 */
 
 :root {
-  --color-bg: white;
+  --color-bg: hsl(36, 33%, 98%);
   --color-bg1: hsl(212.31deg, 32%, 92%);
   --color-bg2: #{$cantaloupe};
   --color-bg3: #{darken($cantaloupe, 1.6%)};
@@ -23,7 +23,7 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --color-bg: #{darken($sky, 42%)};
+    --color-bg: hsl(36, 33%, 4%);
     --color-bg1: hsl(212.31deg, 65%, 8%);
     --color-bg2: #{desaturate(lighten($fig, 12%), 50%)};
     --color-bg3: #{lighten($fig, 16%)};

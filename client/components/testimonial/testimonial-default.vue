@@ -13,6 +13,8 @@
   margin: auto;
   position: relative;
   padding: 4rem 2rem;
+  background: var(--color-bg4);
+  border-radius: var(--radius-large);
 
   p {
     font-size: var(--heading-medium);
@@ -38,15 +40,6 @@
     &::after {
       content: "”";
     }
-  }
-
-  &::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: var(--color-bg4);
-    border-radius: var(--radius-large);
-    z-index: 0;
   }
 
   cite::before {
