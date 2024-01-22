@@ -3,21 +3,27 @@
   z-index: 1;
   width: 100%;
   padding-top: 90px;
+  display: flex;
+  flex-direction: column-reverse;
+  height: 100vh;
 
   @include media(3-up) {
-    min-height: 100vh;
+    flex-direction: row;
+    align-items: center;
+    min-height: calc(100vh - 90px);
   }
 }
 
 .bg {
+  width: 100vw;
   overflow: hidden;
-  inset: 0;
   margin: 0;
   position: relative;
   background: black;
 
   @include media(3-up) {
-    position: absolute;
+    width: 66vw;
+    aspect-ratio: 3/2;
 
     &::before {
       content: "";
@@ -47,39 +53,41 @@
 
 .root .text {
   z-index: 1;
+  flex: 1;
   text-align: center;
   position: relative;
   padding: 1.5rem 1rem;
   color: var(--color-text);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 
   @include media(3-up) {
     color: white;
-    position: absolute;
-    bottom: 0;
-    min-height: 66vh;
-    left: 1rem;
-    right: 1rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
+    text-align: left;
+    padding: 1.5rem 3rem;
   }
 
   .title {
     color: currentColor;
     font-family: var(--font-heading);
+    line-height: 1;
     font-style: italic;
     font-weight: 500;
     margin: 0 auto 1.5rem;
 
     @include media(3-up) {
-      font-size: var(--heading-xxlarge);
+      font-size: 6vw;
+      margin-bottom: 4rem;
     }
   }
 
   .button {
     @include media(3-up) {
-      margin: 0 auto;
+      margin: 0;
       border-color: currentColor;
       color: currentColor;
       background-color: transparent;

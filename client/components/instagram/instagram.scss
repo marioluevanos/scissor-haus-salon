@@ -1,3 +1,17 @@
+.root {
+  text-align: center;
+  padding: var(--ui-section-p) var(--ui-gutter);
+  max-width: var(--ui-maxw-xlarge);
+  width: 100%;
+  display: block;
+  margin: 6rem auto;
+}
+
+.subtitle {
+  color: var(--color-text2);
+  margin-bottom: 2rem;
+}
+
 .posts {
   grid-gap: 1rem;
   display: grid;

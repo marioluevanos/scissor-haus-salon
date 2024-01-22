@@ -4,10 +4,10 @@ const { isSticky } = useSticky();
 </script>
 
 <template>
-  <header id="header-sticky" :class="`root ${isSticky ? 'header-sticky' : ''}`">
+  <header id="header-sticky" :class="`root ${isSticky ? 'isSticky' : ''}`">
     <div class="container">
       <nuxt-link href="/" class="logo">
-        <header-logo />
+        <header-sticky-logo />
       </nuxt-link>
       <nav class="nav">
         <nuxt-link v-for="(item, i) in menuLinks" :key="i" :href="item.link">{{
@@ -19,5 +19,5 @@ const { isSticky } = useSticky();
 </template>
 
 <style scoped lang="scss">
-@import "./header.scss";
+@import "./header-sticky.scss";
 </style>

@@ -1,18 +1,19 @@
 import { ref, watch } from "vue";
 import { defineStore } from "pinia";
+import { InstagramPost } from "components/instagram/index.vue";
 
 export const useUtilityStore = defineStore("utility", () => {
   const route = useRoute();
   let modalId = ref<string | null>(null);
-  let modalMediaUrl = ref<string>("");
+  let content = ref<InstagramPost[]>([]);
 
   /**
    * Open the modal
    */
-  const openModal = (id: string, mediaUrl: string) => {
+  const openModal = (id: string, posts: InstagramPost[], index: number) => {
     modalId.value = id;
-    modalMediaUrl.value = mediaUrl;
-    document.documentElement.classList.add("modal-active");
+    content.value = posts;
+    document.documentElement.setAttribute("data-modal-active", `${index}`);
   };
 
   /**
@@ -20,7 +21,7 @@ export const useUtilityStore = defineStore("utility", () => {
    */
   const closeModal = () => {
     modalId.value = null;
-    document.documentElement.classList.remove("modal-active");
+    document.documentElement.removeAttribute("data-modal-active");
   };
 
   watch(
@@ -34,6 +35,6 @@ export const useUtilityStore = defineStore("utility", () => {
     openModal,
     closeModal,
     modalId,
-    modalMediaUrl,
+    content,
   };
 });

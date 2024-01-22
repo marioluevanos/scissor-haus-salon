@@ -1,5 +1,5 @@
 <template>
-  <header-default />
+  <header-sticky />
   <main>
     <slot />
   </main>

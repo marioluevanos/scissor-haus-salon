@@ -23,8 +23,8 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --color-bg: hsl(36, 33%, 4%);
-    --color-bg1: hsl(212.31deg, 65%, 8%);
+    --color-bg: hsl(206, 0%, 8%);
+    --color-bg1: hsl(212.31deg, 65%, 16%);
     --color-bg2: #{desaturate(lighten($fig, 12%), 50%)};
     --color-bg3: #{lighten($fig, 16%)};
     --color-bg4: #{rgba($olive, 0.66)};

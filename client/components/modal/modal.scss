@@ -3,6 +3,9 @@
   inset: 0;
   z-index: 1000;
   overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .root .overlay {
@@ -19,6 +22,21 @@
   border: none;
   color: white;
   z-index: 10;
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(black, 0.66);
+    border-radius: 2rem;
+    z-index: 0;
+  }
+
+  svg {
+    position: relative;
+    z-index: 1;
+  }
+
   * {
     pointer-events: none;
   }
@@ -27,9 +45,6 @@
 .root .content {
   width: 100vw;
   height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   color: currentColor;
   z-index: 0;
   position: relative;

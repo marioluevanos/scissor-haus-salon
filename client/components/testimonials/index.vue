@@ -1,14 +1,26 @@
 <script setup lang="ts"></script>
 
 <template>
-  <blockquote class="testimonial">
-    <p>Ruthie makes happy hair</p>
-    <cite>Carrie, Pasadena, CA</cite>
-  </blockquote>
+  <section class="testimonials">
+    <Text tag="h2" weight="400" size="heading-xsmall"
+      >What our Clients say</Text
+    >
+    <blockquote class="testimonial">
+      <p>Ruthie makes happy hair</p>
+      <cite>Carrie, Pasadena, CA</cite>
+    </blockquote>
+  </section>
 </template>
 
 <style lang="scss" scoped>
-.testimonial {
+.testimonials {
+  text-align: center;
+  padding: var(--ui-section-p) var(--ui-gutter);
+  max-width: var(--ui-maxw-medium);
+  margin: 0 auto;
+}
+
+.testimonials {
   color: black;
   margin: auto;
   position: relative;

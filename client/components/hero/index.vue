@@ -2,25 +2,25 @@
 import { onMounted, onUnmounted } from "vue";
 
 onMounted(() => {
-  document.body.classList.add("has-hero");
+  document.body.classList.add("hasHero");
 });
 
 onUnmounted(() => {
-  document.body.classList.remove("has-hero");
+  document.body.classList.remove("hasHero");
 });
 </script>
 
 <template>
   <section class="root" data-hero>
-    <figure class="bg">
-      <img src="/about/about-big-1.jpg" alt="Hero" />
-    </figure>
     <div class="text">
-      <Text size="heading-small" class="title"
-        >Unlock Your Hair's Potential</Text
+      <Text tag="h2" size="heading-medium" class="title"
+        >Elevate your charming look</Text
       >
       <nuxt-link href="/about" class="button">Read More</nuxt-link>
     </div>
+    <figure class="bg">
+      <img src="/about/about-big-1.jpg" alt="Hero" />
+    </figure>
   </section>
 </template>
 
